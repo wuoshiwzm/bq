@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>发布招标公告</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/fabu.css" rel="stylesheet" type="text/css" />
+    <link href="css/laydate.css" rel="stylesheet" type="text/css" />
+    <link href="css/webuploader.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/logincommon.js"></script>
+    <script src="js/kindeditor-min.js" charset="utf-8"></script>
+    <script src="js/zh_cn.js" charset="utf-8"></script>
+    <script src="js/layer.min.js" type="text/javascript"></script>
+    <script src="js/laydate.js" type="text/javascript"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/webuploader.js"></script>
+    <style>
+        .webuploader-pick {
+            width: 71px;
+            height: 39px;
+            background: url(images/sprite.png) 0 -901px;
+            display: block;
+            float: left;
+            line-height: 39px;
+            padding: 0px 0 0 50px;
+            color: #4595e6;
+        }
+
+        .xubox_tipsMsg {
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        
+    </script>
+    <form name="form1" method="post" action="wtFabu.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MjM0MDM0MDMPZBYCZg9kFgICDg9kFgJmD2QWAgICDw8WAh4IUmVhZE9ubHlnZGRkVPxriGXI3AGsA8hYiUiYsHKyjbKrHf68vhfJf+aB5Xg=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1EE20505" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEwKqzMPdCwKK+474BgKM+4r4BgKxyu7RAQKjm6b0CgKrmr31CQLZvPeOBAKk17OoBAKJ7snHCAK78vW9CAKm7d35CwLG/bykAQK9yN7eBwLI8p7bCwLMs6WOCwKEgL6YBgLO9v7+DwLPnMWnCwK0lLiEBhG8mbqpy3pWE/LE3+osSq9TPMSODWzX09P01M+pHLYd" />
+</div>
+            <!--此处为导航-->
+            <div class="N">
+                <div class="nav">
+                    <div class="navbox">
+                        <ul>
+                            <li><a class="currentB" href="" title="发布招标">发布招标</a></li>
+                            <li><a href="" title="发布中标结果">发布中标结果</a></li>
+							<li><a href="" title="发布采购询价">发布采购询价</a></li>
+                        </ul>
+                    </div>
+                    <div class="phone">
+                        <div class="PHbg"></div>
+                        <span>400-123-1233</span>
+                    </div>
+                </div>
+                <div class="navbottom"></div>
+            </div>
+            <script>
+                $("#sousou").click(function () {
+                    var keywords = $("#guanjianci").val();
+                    if ($.trim(keywords) != "") {
+                        if (encodeURIComponent(keywords) != encodeURIComponent("请输入关键词，同时搜索多个词用空格隔开")) {
+                            window.open("http://search.bidcenter.com.cn/search?keywords=" + encodeURIComponent(keywords));
+                        } else {
+                            window.open("http://search.bidcenter.com.cn/search");
+                        }
+                    } else { window.open("http://search.bidcenter.com.cn/search"); }
+                });
+            </script>
+            <!--步骤-->
+            <ul class="daohangtiao">
+
+                <li class="step">
+                	<span class="step_deco"></span>
+                    <span class="step_val">1</span>
+                    <span class="step_title">
+                        <span class="typ_ver">发布招标公告</span>
+                        <span class="opt_ver" style="display: none;">发布招标公告</span>
+                    </span>
+                </li>
+
+
+                <li class="step">
+                	<span class="step_deco_on"></span>
+                    <span class="val_on">2</span>
+                    <span class="step_title">
+                        <span class="typ_ver" style="display: none;">上传资质</span>
+                        <span class="opt_ver">上传资质</span>
+                    </span>
+                </li>
+
+                <li class="step">
+                    <span class="step_deco"></span>
+                    <span class="step_val">3</span>
+                    <span class="step_title">
+                        <span class="typ_ver">等待审核</span>
+                        <span class="opt_ver" style="display: none;">等待审核</span>
+                    </span>
+                </li>
+
+                <li class="step">
+                    <span class="step_deco"></span>
+                    <span class="step_val">4</span>
+                    <span class="step_title">
+                        <span class="typ_ver">供应商报名</span>
+                        <span class="opt_ver" style="display: none;">供应商报名</span>
+                    </span>
+                </li>
+
+                <li class="step">
+                    <span class="step_deco"></span>
+                    <span class="step_val">5</span>
+                    <span class="step_title">
+                        <span class="typ_ver">发布中标结果</span>
+                        <span class="opt_ver" style="display: none;">发布中标结果</span>
+                    </span>
+                </li>
+
+            </ul>
+            <!--此处为内容-->
+            <div class="main">
+            	<img src="images/xi.png"  class="juzhong"/>
+                <div class="shangchuan">
+                	<h1>企业资质上传</h1>
+                    <div class="shang_con">
+                    	<span style="display:block;width:42px;height:42px;text-align:center;line-height:42px; border:1px solid #FF0000; color:#FF0000; float:left;margin-right:20px;">1</span>
+                        <p style="float:left;"><span style="color:#000; font-weight:bold;">完善发布资料</span><br /><span style="color:#666666">完善用户信息,方便查找和联系您,及时了解招标投标信息,管理自己发布的信息</span></p>
+                        <span style="width:168px;height:35px;background:#FF0000;color:#fff;text-align:center;line-height:35px;float:right;margin-top: 6px;">完善发布资料</span>
+                    </div>
+                    <div class="shang_con">
+                    	<span style="display:block;width:42px;height:42px;text-align:center;line-height:42px; border:1px solid #FF0000; color:#FF0000; float:left;margin-right:20px;">2</span>
+                        <p style="float:left;"><span style="color:#000; font-weight:bold;">上传三证</span><br /><span style="color:#666666">可优先审核项目信息,提高企业真实性.</span></p>
+                        <span style="width:168px;height:35px;background:#FF0000;color:#fff;text-align:center;line-height:35px;float:right;margin-top: 6px;">上传企业三证</span>
+                    </div>
+                    <div class="shang_con">
+                    	<span style="display:block;width:42px;height:42px;text-align:center;line-height:42px; border:1px solid #FF0000; color:#FF0000; float:left;margin-right:20px;">3</span>
+                        <p style="float:left;"><span style="color:#000; font-weight:bold;">项目批文</span><br /><span style="color:#666666">项目发布委托函,提供项目委托发布证件</span></p>
+                        <span style="width:168px;height:35px;background:#FF0000;color:#fff;text-align:center;line-height:35px;float:right;margin-top: 6px;">上传项目委托函</span>
+                    </div>
+                     <p class="paa"> <a href="">立即进入用户中心</a></p>
+                </div>
+            </div>
+</body>
+</html>
+
+

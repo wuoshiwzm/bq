@@ -1,0 +1,159 @@
+{template 'header', $module}
+
+    <div class="page_right">
+          <div class="title1">
+              <div class="title1_left">
+                <ul>
+						<li><img src="images/icon.jpg"><span>用户名：{$_truename}</span></li>
+						
+					</ul>
+              </div>
+              <div class="title1_right">
+					<div class="Scroll">
+						<div id="gd_news" style="overflow: hidden; width: 500px; height: 35px;">
+                        <table cellspacing="0" cellpadding="0" style="border-collapse:collapse;display:inline;">
+                        <tbody><tr>
+                             
+  {php $tags=tag("table=message&condition=status=3&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          {if $i%3==0}
+                        <td nowrap="true" style="white-space: nowrap;word-break:keep-all;">
+							<table cellspacing="0" cellpadding="0" style="border-collapse:collapse;display:inline;">
+								<tbody>
+									<tr>
+										<td nowrap="true" style="white-space: nowrap;word-break:keep-all;">
+                                        {/if}
+                                        
+										<a href="{$t[linkurl]}" title="{$t[alt]}" target="cont">
+											{$t[title]}
+										</a>
+										
+                             {if $i%3==2||$i==count($tags)-1}           
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+                        {/if}
+                        {/loop}
+                        
+                        </tr></tbody>
+                        </table>
+                        </div>
+					</div>
+					<script>
+						new Marquee("gd_news", 2, 2, 500, 35, 50, 0, 0, 31);
+					</script>
+				</div>
+          </div>
+          <div class="title2"><b>位置：</b><a href="#">工作台</a></div>
+          <div class="con">
+                <div class="title3"><b>工作台</b>
+                    </div>
+                <div>
+                	<div class="clear"></div>
+                    <div class="Subject">
+                        <div class="title4"><b>求租信息</b><a href="/member/my.php?mid=6&typeid=1&xx=1">更多&gt;&gt;</a></div>
+                        <table width="98%">
+                          <tbody>
+                          {php $tags=tag("moduleid=6&condition=status=3&username='$_username'&typeid=1&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          <tr>
+                            <td {if $i==1}width="80%"{/if}><div style="width:100%;overflow:hidden;line-height:26px;margin-left:10px;padding-left:15px;background: url(images/k4.jpg) no-repeat scroll left center rgba(0, 0, 0, 0);">
+                             <a href="{$t[linkurl]}">{$t[title]}</a> </div></td>
+                            <td><div style="line-height:26px;margin-left:10px;padding-left:15px;">{timetodate($t['addtime'],3)}</div></td>
+                          </tr>
+                          {/loop}
+                          
+                        </tbody></table>
+                    </div>
+                    <div class="Subject">
+                        <div class="title4"><b>出售信息</b><a href="/member/my.php?mid=5&typeid=1&xx=3">更多&gt;&gt;</a></div>
+                        <table width="98%">
+                          <tbody>
+                          
+                          {php $tags=tag("moduleid=5&condition=status=3&username='$_username'&typeid=1&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          <tr>
+                            <td {if $i==1}width="80%"{/if}><div style="width:100%;overflow:hidden;line-height:26px;margin-left:10px;padding-left:15px;background: url(images/k4.jpg) no-repeat scroll left center rgba(0, 0, 0, 0);">
+                             <a href="{$t[linkurl]}">{$t[title]}</a> </div></td>
+                            <td><div style="line-height:26px;margin-left:10px;padding-left:15px;">{timetodate($t['addtime'],3)}</div></td>
+                          </tr>
+                          {/loop}
+                          
+                        </tbody></table>
+                    </div>
+                    <div class="Subject">
+                        <div class="title4"><b>招商信息</b><a href="/member/my.php?mid=22&xx=4">更多&gt;&gt;</a></div>
+                        <table width="98%">
+                          <tbody>
+                          
+                         {php $tags=tag("moduleid=22&condition=status=3&username='$_username'&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          <tr>
+                            <td {if $i==1}width="80%"{/if}><div style="width:100%;overflow:hidden;line-height:26px;margin-left:10px;padding-left:15px;background: url(images/k4.jpg) no-repeat scroll left center rgba(0, 0, 0, 0);">
+                             <a href="{$t[linkurl]}">{$t[title]}</a> </div></td>
+                            <td><div style="line-height:26px;margin-left:10px;padding-left:15px;">{timetodate($t['addtime'],3)}</div></td>
+                          </tr>
+                          {/loop}
+                          
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="Subject">
+                        <div class="title4"><b>招标信息</b><a href="/member/my.php?mid=26&xx=5">更多&gt;&gt;</a></div>
+                        <table width="98%">
+                          <tbody>
+                          
+                         {php $tags=tag("moduleid=26&condition=status=3&username='$_username'&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          <tr>
+                            <td {if $i==1}width="80%"{/if}><div style="width:100%;overflow:hidden;line-height:26px;margin-left:10px;padding-left:15px;background: url(images/k4.jpg) no-repeat scroll left center rgba(0, 0, 0, 0);">
+                             <a href="{$t[linkurl]}">{$t[title]}</a> </div></td>
+                            <td><div style="line-height:26px;margin-left:10px;padding-left:15px;">{timetodate($t['addtime'],3)}</div></td>
+                          </tr>
+                          {/loop}
+                          
+                        </tbody></table>
+                    </div>
+                    <div class="Subject">
+                        <div class="title4"><b>自媒体信息</b><a href="/member/my.php?mid=18&xx=7">更多&gt;&gt;</a></div>
+                        <table width="98%">
+                         	<tbody>
+                            
+                            {php $tags=tag("moduleid=18&condition=status=3&username='$_username'&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          <tr>
+                            <td {if $i==1}width="80%"{/if}><div style="width:100%;overflow:hidden;line-height:26px;margin-left:10px;padding-left:15px;background: url(images/k4.jpg) no-repeat scroll left center rgba(0, 0, 0, 0);">
+                             <a href="{$t[linkurl]}">{$t[title]}</a> </div></td>
+                            <td><div style="line-height:26px;margin-left:10px;padding-left:15px;">{timetodate($t['addtime'],3)}</div></td>
+                          </tr>
+                          {/loop}
+                            
+                         </tbody></table>
+                    </div>
+                    <div class="Subject">
+                        <div class="title4"><b>我的消息</b><a href="/member/message.php?fw=1">更多&gt;&gt;</a></div>
+                        <table width="98%">
+                         	<tbody>
+                            
+                            {php $tags=tag("table=message&condition=status=3&username='$_username'&pagesize=6&order=addtime desc&template=null");}
+                          {loop $tags $i $t}
+                          <tr>
+                            <td {if $i==1}width="80%"{/if}><div style="width:100%;overflow:hidden;line-height:26px;margin-left:10px;padding-left:15px;background: url(images/k4.jpg) no-repeat scroll left center rgba(0, 0, 0, 0);">
+                             <a href="message.php?action=show&itemid={$t[itemid]}">{$t[title]}</a> </div></td>
+                            <td><div style="line-height:26px;margin-left:10px;padding-left:15px;">{timetodate($t['addtime'],3)}</div></td>
+                          </tr>
+                          {/loop}
+                            
+                         </tbody>
+                         </table>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+          </div>
+      </div>
+    
+  
+
+{template 'footer', $module}

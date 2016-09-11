@@ -1,0 +1,35 @@
+<?php defined('IN_DESTOON') or exit('Access Denied');?><div class="nav">
+        <li <?php if($moduleid<4) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>"><p class="nav_top">SHOUYE</p><p class="nav_bottom">网站首页</p></a>
+        </li>
+         <li <?php if($moduleid==5 && $catid==216) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>sell/list.php?catid=216"><p class="nav_top">GUANGGAO</p><p class="nav_bottom">广告媒体</p></a>
+        </li>
+        <li <?php if($moduleid==5 && $catid==217) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>sell/list.php?catid=217"><p class="nav_top">SHEJI</p><p class="nav_bottom">创意设计</p></a>
+        </li>
+        <li <?php if($moduleid==5 && $catid==218) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>sell/list.php?catid=218"><p class="nav_top">CEHUA</p> <p class="nav_bottom">活动策划</p></a>
+        </li>
+        <li <?php if($moduleid==18) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>ZIMEITI/"><p class="nav_top">ZIMEITI</p><p class="nav_bottom">自媒体</p></a>
+        </li>
+        <li <?php if($moduleid==26) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo $MODULE['26']['linkurl'];?>"><p class="nav_top">ZHAOBIAO</p><p class="nav_bottom">热门招标</p></a>
+        </li>
+        <li <?php if($moduleid==22) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>invest/list.php?catid=204"><p class="nav_top">PENGYOU</p><p class="nav_bottom">招商中心</p></a>
+        </li>
+       
+        <li <?php if($moduleid==21) { ?>class="select"<?php } ?>
+>
+            <a href="<?php echo DT_STATIC;?>news/list.php?catid=203"><p class="nav_top">BAIKEZILIAO</p><p class="nav_bottom">百科资料</p></a>
+        </li>
+    </div>

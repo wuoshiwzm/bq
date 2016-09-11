@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
+{if $head_keywords}
+<meta name="keywords" content="{$head_keywords}"/>
+{/if}
+{if $head_description}
+<meta name="description" content="{$head_description}"/>
+{/if}
+
+<link rel="stylesheet" type="text/css" href="{DT_STATIC}{$MODULE[2][moduledir]}/image/style.css"/>
+{if $DT_TOUCH}
+<link rel="stylesheet" type="text/css" href="{$EXT[mobile_url]}static/member.css"/>
+<script type="text/javascript">var Dbrowser = '{$DT_MOB[browser]}';</script>
+{/if}
+{if !DT_DEBUG}<script type="text/javascript">window.onerror= function(){return true;}</script>{/if}
+<script type="text/javascript" src="{DT_STATIC}lang/{DT_LANG}/lang.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/config.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/jquery.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/common.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/admin.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/member.js"></script>
+{if $DT_TOUCH}<script type="text/javascript" src="{$EXT[mobile_url]}static/js/fix.js"></script>{/if}
+
+
+        <link href="css/css.css" type="text/css" rel="stylesheet">
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/lanrenzhijia.js"></script>
+        <script src="js/MSClass.js"></script>
+        
+	</head>
+<body>
+
+
+<div class="page_top">
+      <div class="page_top_left"></div>
+      <div class="page_top_right">
+          <ul>
+             <li><a href="logout.php?forward=" ><img src="images/4.png"></a></li>
+           
+             <li><a href="/member/" ><img src="images/2.png"></a></li>
+             <li><a href="{DT_PATH}"><img src="images/1.png"></a></li>
+          </ul>
+      </div>
+      <div class="clear"></div>
+</div>
+
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td style=" margin-top:0px; padding-top:0px; border-right:1px solid #b7d5df; width:187px;" valign="top">
+    <div class="page_con" style=" width:186px; float:left;">
+      <div class="page_left">
+         <div class="left_title">系统功能</div>
+         <div class="lanrenzhijia">
+             <ul id="nav_dot">
+			 <li>
+          <h4 class=""><img src="images/b3.png">服务中心</h4>
+          <div class="list-item {if !$fw && $mid!=2} none {/if} ">
+            
+            
+            <a href="/member/?&fw=4" {if $fw==4} class="hover" {/if} >管理首页</a>
+            <a href="/member/message.php?action=send&fw=1" {if $fw==1} class="hover" {/if} >站内信</a>
+            <a href="/member/chat.php?action=add&fw=2" {if $fw==2} class="hover" {/if} >站内沟通</a>
+            <a href="/member/friend.php?action=add&fw=3" {if $fw==3} class="hover" {/if} >站内好友</a>
+            <a href="/member/profile.php?&fw=5" {if $fw==5} class="hover" {/if} >个人资料</a>
+            <a href="/member/edit.php?&fw=6"  {if $fw==6} class="hover" {/if} >密码管理</a>
+            <a href="/member/ad.php?&fw=7"  {if $fw==7} class="hover" {/if} >广告预定</a>
+            <a href="/member/spread.php?&fw=8"  {if $fw==8} class="hover" {/if} >排名推广</a>
+            <a href="/member/ask.php?&fw=9" {if $fw==9} class="hover" {/if} >客服中心</a>
+           
+        </div>
+        </li>
+		<li>
+          <h4 class=""><img src="images/b2.png">信息发布</h4>
+          <div class="list-item {if !$xx} none {/if}">
+            {if $_groupid>5}
+            <a href="/member/my.php?mid=6&typeid=1&xx=1" {if $xx==1} class="hover" {/if} >广告求购</a>
+            <a href="/member/my.php?mid=5&typeid=0&xx=2" {if $xx==2} class="hover" {/if} >广告出租</a>
+            <a href="/member/my.php?mid=5&typeid=1&xx=3" {if $xx==3} class="hover" {/if} >广告出售</a>
+            <a href="/member/my.php?mid=22&xx=4" {if $xx==4} class="hover" {/if} >招商信息</a>
+            <a href="/member/my.php?mid=26&xx=5" {if $xx==5} class="hover" {/if} >招标信息</a>
+            <a href="/member/my.php?mid=27&xx=6" {if $xx==6} class="hover" {/if} >中标信息</a>
+            <a href="/member/my.php?mid=18&job=group&action=add&xx=7" {if $xx==7} class="hover" {/if} >自媒体</a>
+            {else}
+             <a href="/member/my.php?mid=6&typeid=1&xx=1" {if $xx==1} class="hover" {/if} >广告求购</a>
+            <a href="/member/my.php?mid=5&typeid=0&xx=2" {if $xx==2} class="hover" {/if} >广告出租</a>
+             <a href="/member/my.php?mid=18&job=group&action=add&xx=7" {if $xx==7} class="hover" {/if} >自媒体</a>
+            {/if}
+			
+        </div>
+        </li>
+		<li>
+          <h4 class=""><img src="images/b7.png">账户信息</h4>
+          <div class="list-item {if !$zh} none {/if}">
+          
+            <a href="/member/record.php?&zh=1" {if $zh==1} class="hover" {/if} >资金流水</a>
+            <a href="/member/charge.php?action=record&zh=2" {if $zh==2} class="hover" {/if} >充值记录</a>
+            <a href="/member/deposit.php?&zh=3" {if $zh==3} class="hover" {/if} >保证金</a>
+            <a href="/member/cash.php?action=record&zh=4" {if $zh==4} class="hover" {/if} >资金提现</a>
+            <a href="/member/credit.php?&zh=5" {if $zh==5} class="hover" {/if} >积分管理</a>
+           
+        </div>
+        </li>
+		<li>
+          <h4 class=""><img src="images/b6.png">公司管理</h4>
+          <div class="list-item {if !$gs} none {/if}">
+          
+            <a href="/member/home.php?&gs=1" {if $gs==1} class="hover" {/if} >公司设置</a>
+           
+            <a href="/member/news.php?&gs=2" {if $gs==2} class="hover" {/if} >公司新闻</a>
+            <a href="/member/page.php?&gs=3" {if $gs==3} class="hover" {/if} >公司单页</a>
+            <a href="/member/honor.php?&gs=4" {if $gs==4} class="hover" {/if} >公司资质</a>
+            <a href="/member/link.php?&gs=5" {if $gs==5} class="hover" {/if} >友情链接</a>
+             
+        </div>
+        </li>
+		
+  </ul>
+  <script>
+  navList(12);
+</script>
+         </div>
+      </div>
+     
+
+
+</div>
+
+    
+    </td>
+   
+     <td valign="top">
+    

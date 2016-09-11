@@ -1,0 +1,1 @@
+<?php defined('IN_DESTOON') or exit('Access Denied'); return array (211 => array ('catid' => '211','catname' => '中标信息','style' => '','catdir' => 'zhongbiaoxinxi','linkurl' => 'list.php?catid=211','letter' => 'z','level' => '1','property' => '0','parentid' => '0','arrparentid' => '0','child' => '0','arrchildid' => '211',),); ?>

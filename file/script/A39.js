@@ -1,0 +1,1 @@
+document.write('<img src="/skin/default/images/pic_240&#120;100.jpg" width="285" height="100" alt=""/>');

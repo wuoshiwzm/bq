@@ -1,0 +1,18 @@
+{template 'head'}
+    <div class="ny_banner">
+    	
+    </div>
+    
+<div class="xiangqing">
+  <div class="ny_top">当前位置： <a href="{$MODULE[1][linkurl]}">首页</a> &raquo; <a href="{$MOD[linkurl]}">{$MOD[name]}</a> &raquo; {cat_pos($CAT, ' &raquo; ')} &raquo; 正文</div>
+  <div class="zw">
+    <div class="fbr"><a href="{userurl($username)}">&nbsp;&nbsp;作者：{$username}</a></div>
+    <div class="news-title-sub">{$title}</div>
+    <div class="fbt">发布时间：{$adddate}　　浏览次数：<span id="hits">{$hits}</span>次</div>
+    <div class="tex">
+		{template 'content', 'chip'}
+</div>
+
+  </div>
+</div>
+{template 'footers'}

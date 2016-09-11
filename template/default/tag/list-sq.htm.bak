@@ -1,0 +1,49 @@
+
+{loop $tags $t}
+
+ <div class="fie_con">
+                      <div class="face">
+                             <img src="{imgurl($t[thumb])}" alt="">
+                      </div>
+                      <div class="fie_right">
+                          <p class="name"><a href="">{$t[title]}</a></p>
+                          <p class="datae"><span>{timetodate($t[addtime],5)}</span> <span>来自{$t[username]}</span></p>
+                          <p class="nei">
+						  {php $itid=$t['itemid'];}
+                              <span> 
+							  {$t[content]}
+							   
+							  </span>
+{php $gtags=tag("moduleid=$moduleid&condition=status=3 and gid=$itid&areaid=$cityid&order=addtime desc&pagesize=3&target=_blank&template=null");}
+{loop $gtags $v}
+                                <img src="{$v[thumb]}" alt="{$v[title]}">
+								{/loop}
+                                 <!-- <img src="{DT_STATIC}file/images/weiboimg.jpg" alt="">
+                                  <img src="{DT_STATIC}file/images/weiboimg.jpg" alt=""> -->
+                          </p>
+                      </div>
+                      <div class="clear"></div>
+                      <div class="fie_bottom"> 
+					  
+<ul>
+{loop $gtags $v}
+<li  style="padding-left:6px;width:167px;float:left;overflow:hidden;text-align:center;margin-left:20px">分享：<a target="_blank" href="http://www.jiathis.com/send/?webid=tqq&url={$v[linkurl]}&title={$v[title]}&summary={$v[introduce]}&pic={$v[thumb]}"><img src="{DT_SKIN}images/down/c4.jpg" width="16" height="16" /></a>
+<a target="_blank" href="http://www.jiathis.com/send/?webid=renren&url={$v[linkurl]}&title={$v[title]}&summary={$v[introduce]}&pic={$v[thumb]}"><img src="{DT_SKIN}images/down/c3.jpg" width="16" height="16" /></a> 
+ <a target="_blank" href="http://www.jiathis.com/send/?webid=tsina&url={$v[linkurl]}&title={$v[title]}&summary={$v[introduce]}&pic={$v[thumb]}"><img src="{DT_SKIN}images/down/c2.jpg" width="16" height="16" /></a>
+<a target="_blank" href="http://www.jiathis.com/send/?webid=qzone&url={$v[linkurl]}&title={$v[title]}&summary={$v[introduce]}&pic={$v[thumb]}"><img src="{DT_SKIN}images/down/c1.jpg" width="16" height="16" /></a>
+</li>
+{/loop}
+ </ul>
+
+                            <!-- <a href=""><img src="{DT_STATIC}file/images/shoucang.jpg" alt=""><span>收藏</span></a>
+                            <a href="" class="su"></a>
+                             <a href=""><img src="{DT_STATIC}file/images/shoucang.jpg" alt=""><span>收藏</span></a>
+                            <a href="" class="su"></a>
+                             <a href=""><img src="{DT_STATIC}file/images/shoucang.jpg" alt=""><span>收藏</span></a>
+                            <a href="" class="su"></a>
+                             <a href=""><img src="{DT_STATIC}file/images/shoucang.jpg" alt=""><span>收藏</span></a> -->
+                      </div>
+                 </div>
+				 {/loop}
+
+{if $showpage && $pages}<div class="pages">{$pages}</div>{/if}

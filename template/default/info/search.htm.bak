@@ -1,0 +1,29 @@
+{template 'head'}
+
+ 
+ 
+
+<div class="xiangqing">
+  <div class="zs">
+    <div class="zstop">
+      <ul>
+	  
+		{loop $maincat $k $v}
+	
+        <li  id="zs1" {if $v[catid]==$catid}class="hover"{/if} onMouseDown="setTab('zs',{$k},3)"><a href="{$MOD[linkurl]}{$v[linkurl]}">{set_style($v[catname],$v[style])}</a></li>
+		{/loop}
+
+		
+      </ul>
+    </div>
+	{if $page == 1}{ad($moduleid,0,'',6)}{/if}		
+
+{template 'list-buy','tag'}
+
+</div></div>
+
+
+
+
+
+{template 'footer'}

@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>发布招标公告</title>
+    <link href="/file/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/file/css/fabu.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="/file/css/laydate.css" rel="stylesheet" type="text/css" />
+
+    <link href="/file/css/webuploader.css" rel="stylesheet" type="text/css" /> -->
+
+   <!-- -->
+
+	<script type="text/javascript">window.onerror= function(){return true;}</script><script type="text/javascript" src="/lang/zh-cn/lang.js"></script>
+<script type="text/javascript" src="/file/script/config.js"></script>
+<!--  <script type="text/javascript" src="/file/script/jquery.js"></script>-->
+<script type="text/javascript" src="/file/script/common.js"></script>
+<script type="text/javascript" src="/file/script/admin.js"></script>
+<script type="text/javascript" src="/file/script/member.js"></script>
+
+   
+</head>
+<body>
+    <script>
+        
+    </script>
+   
+ 
+            <!--此处为导航-->
+            <div class="N">
+                <div class="nav">
+                    <div class="navbox">
+                        <ul>
+                          <li><a class="currentB" href="/info/fbzb.php" title="发布招标">发布招标</a></li>
+                            <li><a href="/zhongbiao/zbfb.php" title="发布中标结果">发布中标结果</a></li>
+							<li><a href="" title="发布采购询价">发布采购询价</a></li>
+                        </ul>
+                    </div>
+                    <div class="phone">
+                        <div class="PHbg"></div>
+                        <span>400-123-1233</span>
+                    </div>
+                </div>
+                <div class="navbottom"></div>
+            </div>
+            
+            <!--步骤-->
+            <ul class="daohangtiao">
+
+                <li class="step">
+                	<span class="step_deco"></span>
+                    <span class="step_val">1</span>
+                    <span class="step_title">
+                        <span class="typ_ver">发布招标公告</span>
+                        <span class="opt_ver" style="display: none;">发布招标公告</span>
+                    </span>
+                </li>
+
+
+                <li class="step">
+                	<span class="step_deco_on"></span>
+                    <span class="val_on">2</span>
+                    <span class="step_title">
+                        <span class="typ_ver" style="display: none;">上传资质</span>
+                        <span class="opt_ver">上传资质</span>
+                    </span>
+                </li>
+
+                <li class="step">
+                    <span class="step_deco"></span>
+                    <span class="step_val">3</span>
+                    <span class="step_title">
+                        <span class="typ_ver">等待审核</span>
+                        <span class="opt_ver" style="display: none;">等待审核</span>
+                    </span>
+                </li>
+
+                <li class="step">
+                    <span class="step_deco"></span>
+                    <span class="step_val">4</span>
+                    <span class="step_title">
+                        <span class="typ_ver">供应商报名</span>
+                        <span class="opt_ver" style="display: none;">供应商报名</span>
+                    </span>
+                </li>
+
+                <li class="step">
+                    <span class="step_deco"></span>
+                    <span class="step_val">5</span>
+                    <span class="step_title">
+                        <span class="typ_ver">发布中标结果</span>
+                        <span class="opt_ver" style="display: none;">发布中标结果</span>
+                    </span>
+                </li>
+
+            </ul>
+            <!--此处为内容-->
+            <div class="main">
+            	<div class="lianxi">
+            		<h1>基本信息完善</h1>
+					 <form name="form1" method="post" action="/member/reg.php" id="form1">
+					 <input type="hidden" name="forward" value="{$forward}">
+					 <input type="hidden" name="id" value="{$id}">
+            		<p><span>用户名：</span><input type="text" name="post[username]" id="username" value="{$_username}"  class="aa" /><!-- <span style="color:#b1b1b1;">{$_username}</span> --></p>
+            		<p><span>邮箱：</span><input type="text" name="post[email]" id="email" class="aa" /></p>
+            		<p><span>密码：</span><input type="password" name="post[password]"  class="aa" /></p>
+            		<p><span>确认密码：</span><input type="password" class="aa" /></p>
+            		<!-- <p class="queren"><a href="">提交</a></p> -->
+					<input type="submit" name="submit" value="提交" class="queren" style="color:#fff;" />
+					</form>
+            	</div>
+            </div>
+</body>
+</html>
+
+
+

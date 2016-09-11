@@ -1,0 +1,409 @@
+﻿
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link href="css/common_1.css" rel="stylesheet" type="text/css" /><link href="css/fabu_zb.css" rel="stylesheet" type="text/css" /><link href="css/laydate.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/logincommon.js"></script>
+    <script src="js/kindeditor-min.js" charset="utf-8"></script>
+    <script src="js/zh_cn.js" charset="utf-8"></script>
+    <script src="js/layer.min.js" type="text/javascript"></script>
+    <script src="js/laydate.js" type="text/javascript"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <title>
+	发布中标结果
+</title></head>
+<body>
+    <form name="form1" method="post" action="wtzbFabu.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMzA2OTg3NTcPZBYCAgMPZBYCAgIPZBYCZg9kFgICBQ8PFgYeCUZvcmVDb2xvcgogHghSZWFkT25seWceBF8hU0ICBGRkZF47ioVi3qmy25gSoNvagqTGSNp+CtnRPsJpl4QHVOnJ" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="942A0985" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCgKypsDFCQKrmr31CQKYsI+VBwKG09P8CAKFxLDlCQKxhtX/CQKOz/ayDwLr8dbVDgLQxv3QCwK0lLiEBmQVUAX1GsYhxauzaXcDK1BP2PkhO7pqpLBPBZhCikyL" />
+</div>
+        <!--顶部导航-->
+            <div class="N">
+                <div class="nav">
+                    <div class="navbox">
+                        <ul>
+                            <li><a class="currentB" href="">发布招标</a></li>
+                            <li><a href="">发布中标结果</a></li>
+							<li><a href="" title="发布采购询价">发布采购询价</a></li>
+                        </ul>
+                    </div>
+                    <div class="phone">
+                        <div class="PHbg"></div>
+                        <span>400-123-1233</span>
+                    </div>
+                </div>
+                <div class="navbottom"></div>
+            </div>
+            <script>
+                $("#sousou").click(function () {
+                    var keywords = $("#guanjianci").val();
+                    if ($.trim(keywords) != "") {
+                        if (encodeURIComponent(keywords) != encodeURIComponent("请输入关键词，同时搜索多个词用空格隔开")) {
+                            window.open("http://search.bidcenter.com.cn/search?keywords=" + encodeURIComponent(keywords));
+                        } else {
+                            window.open("http://search.bidcenter.com.cn/search");
+                        }
+                    } else { window.open("http://search.bidcenter.com.cn/search"); }
+                });
+            </script>
+        <!--步骤-->
+        <ul class="daohangtiao">
+
+            <li class="step">
+                <span class="step_deco_on"></span>
+                <span class="val_on">1</span>
+                <span class="step_title">
+                    <span class="typ_ver" style="display: none;">发布中标结果</span>
+                    <span class="opt_ver">发布中标结果</span>
+                </span>
+            </li>
+
+
+            <li class="step">
+                <span class="step_deco"></span>
+                <span class="step_val">2</span>
+                <span class="step_title">
+                    <span class="typ_ver">上传资质</span>
+                    <span class="opt_ver" style="display: none;">上传资质</span>
+                </span>
+            </li>
+
+            <li class="step">
+                <span class="step_deco"></span>
+                <span class="step_val">3</span>
+                <span class="step_title">
+                    <span class="typ_ver">等待审核</span>
+                    <span class="opt_ver" style="display: none;">等待审核</span>
+                </span>
+            </li>
+
+            <li class="step">
+                <span class="step_deco"></span>
+                <span class="step_val">4</span>
+                <span class="step_title">
+                    <span class="typ_ver">发布成功</span>
+                    <span class="opt_ver" style="display: none;">发布成功</span>
+                </span>
+            </li>
+
+
+        </ul>
+
+        <!--此处为内容-->
+        <div class="main">
+            <!--此处为“中标结果”-->
+            <div class="biaoti"><span>中标结果</span></div>
+            
+            <div class="zhuce">
+                <span>您还未登录，为了方便您发布中标结果，请点击<a title="登录" style="color: rgb(69, 149, 230);"
+                    href="">登录</a></span>
+            </div>
+            
+            <!--此处为“中标单位”-->
+            <div class="BTwenzi">
+                <a title="中标标题" href="javascript:"><span
+                    class="ziti1">中标标题</span>&nbsp;&nbsp;&nbsp;&nbsp;</a><input name="txt_bt" class="inp1" id="txt_bt"
+                        type="text" placeholder="请输入中标结果的项目名称" value=""><div class="clear"></div>
+            </div>
+
+            <!--此处为“业主单位”-->
+            <div class="BTwenzi">
+                <a title="业主单位" href="javascript:"><span
+                    class="ziti1">业主单位</span>&nbsp;&nbsp;&nbsp;&nbsp;</a><input name="txt_dw" class="inp1 inpp1" id="txt_dw"
+                        type="text" placeholder="如：海诚通胜网络科技有限公司" value=""><div class="clear"></div>
+            </div>
+            <!--此处为“地区”-->
+            <div class="BTwenzi">
+                <a title="地区" href="javascript:"><span
+                    class="ziti1">所在地区</span>&nbsp;&nbsp;&nbsp;&nbsp;</a><input placeholder="点击选择所在地" readonly name="diqu" class="inp1 inpp1" id="diqu"
+                        type="text" /><div class="clear"></div>
+            </div>
+            <!--此处为“中标单位”-->
+            <div class="BTwenzi">
+                <a title="中标单位" href="javascript:"><span
+                    class="ziti1">中标单位</span>&nbsp;&nbsp;&nbsp;&nbsp;</a><input name="txt_zbdw" class="inp1 inpp1" id="txt_zbdw"
+                        type="text" placeholder="如：海诚通胜网络科技有限公司" value=""><div class="clear"></div>
+            </div>
+            <!--此处为“中标金额”-->
+            <div class="BTwenzi bianhao">
+                <a title="中标金额" href="javascript:"><span
+                    class="ziti1">中标金额</span>&nbsp;&nbsp;&nbsp;&nbsp;</a><input id="zbje" name="zbje" class="inp1 inpp2" type="text" placeholder="请输入中标金额"
+                        value=""><div class="clear"></div>
+            </div>
+            <!--此处为“项目编号”-->
+            <div class="BTwenzi bianhao bianhao2">
+                <a title="项目编号" href="javascript:"><span
+                    class="ziti1">项目编号</span>&nbsp;&nbsp;&nbsp;&nbsp;</a><input id="xmbh" name="xmbh" class="inp1 inpp2" type="text" placeholder="请输入项目编号"
+                        value=""><div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+            <!--此处为“公示截止时间”-->
+            <div class="SJwenzi">
+                <a title="公示截止时间" href="javascript:"><span
+                    class="ziti1">公示截止时间</span></a>
+            </div>
+            <div class="NR">
+                <div class="SJwenzi1" id="gsjzsjshow">
+                    <div class="bmks">
+                        <input name="gsjzsj" class="inp11" id="gsjzsj" type="text"
+                            readonly="" placeholder="选择报名截止时间" value="">
+                        <a href="javascript:"></a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="clear"></div>
+            <div class="wrap dvarealist" style="display: none;">
+                <div class="mal">
+                    <div class="ma10">
+                        <table width='500' border='0' cellspacing='0' cellpadding='0'>
+                            <tr>
+                                <td width="50" colspan="8">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>华东</strong>
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='上海' />
+                                    上海
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='江苏' />
+                                    江苏
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='浙江' />
+                                    浙江
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='安徽' />
+                                    安徽
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='福建' />
+                                    福建
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='江西' />
+                                    江西
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='山东' />
+                                    山东
+                                </td>
+                                <td width="65">
+                                    <input type="checkbox" value='台湾' />
+                                    台湾
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>华北</strong>
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='北京' />
+                                    北京
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='天津' />
+                                    天津
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='河北' />
+                                    河北
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='山西' />
+                                    山西
+                                </td>
+                                <td colspan="4">
+                                    <input type="checkbox" value='内蒙古' />
+                                    内蒙古
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>东北</strong>
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='辽宁' />
+                                    辽宁
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='吉林' />
+                                    吉林
+                                </td>
+                                <td colspan="6">
+                                    <input type="checkbox" value='黑龙江' />
+                                    黑龙江
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>华南</strong>
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='广东' />
+                                    广东
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='广西' />
+                                    广西
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='海南' />
+                                    海南
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='香港' />
+                                    香港
+                                </td>
+                                <td colspan="4">
+                                    <input type="checkbox" value='澳门' />
+                                    澳门
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>西北</strong>
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='陕西' />
+                                    陕西
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='甘肃' />
+                                    甘肃
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='青海' />
+                                    青海
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='宁夏' />
+                                    宁夏
+                                </td>
+                                <td colspan="4">
+                                    <input type="checkbox" value='新疆' />
+                                    新疆
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>西南</strong>
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='重庆' />
+                                    重庆
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='四川' />
+                                    四川
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='贵州' />
+                                    贵州
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='云南' />
+                                    云南
+                                </td>
+                                <td colspan="4">
+                                    <input type="checkbox" value='西藏' />
+                                    西藏
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="60" align="center" valign="middle" class="dis">
+                                    <strong>华中</strong>
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='河南' />
+                                    河南
+                                </td>
+                                <td>
+                                    <input type="checkbox" value='湖北' />
+                                    湖北
+                                </td>
+                                <td colspan="6">
+                                    <input type="checkbox" value='湖南' />
+                                    湖南
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="m5">
+                        <p>
+                            <span class="red">您选择的地区是:</span><span class="spslareas"></span>
+                        </p>
+                    </div>
+                    <div class="fr">
+                        <a href="JavaScript:" class="aareasure">确定</a><a href="JavaScript:" class="aareaclear">清空</a><a href="JavaScript:"
+                            class="aareaclose" style="margin-right: 200px;">关闭</a>
+                    </div>
+                    <div class="cle">
+                    </div>
+                </div>
+            </div>
+            <!--此处为“联系信息”-->
+            <div class="XXwenzi">
+                <a title="联系信息" href="javascript:">
+                    <span class="ziti1">联系信息</span>&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+            
+            <div class="shuru">
+                <div class="XXwenzi1">
+                    <span class="lxr">联系人</span><input name="lxrname" class="inp5" id="lxrname" type="text"
+                        placeholder="填写联系人姓名" value="">
+                </div>
+                <div class="XXwenzi1">
+                    <span class="shouji">手机</span><input name="phoneno" class="inp5"
+                        id="phoneno" type="text" placeholder="填写手机号码"
+                        value="">&nbsp;&nbsp;&nbsp;&nbsp;<a class="inp6" id="getmsg"
+                            href="javascript:">获取手机验证码</a>
+                </div>
+                <div class="XXwenzi1">
+                    <span class="lxr">验证码</span><input name="noyzm" class="inp12" id="noyzm" type="text"
+                        placeholder="数字验证码" value="">
+                </div>
+            </div>
+
+            <!--此处为“中标内容”-->
+            <div class="ZBwenzi" id="zbnrshow">
+                <a title="中标内容" class="ZBwenzitit" href="javascript:"><span
+                    class="ziti1">中标内容</span></a><span class="ziti2">不知道怎么写中标内容<a href="">模板样例</a>中标公告模板</span>
+            </div>
+            <div class="chajian">
+                <textarea name="txtContent" id="txtContent" style="width: 100%; height: 280px; font-size: 12px; color: #666;" class="txtContent"></textarea>
+            </div>
+
+            <div class="sumbit">
+                <a href="javascript:" id="tjfb" onclick="return allsub();" title="提交">提交发布</a>
+                <p>详情咨询：010-5601-3507</p>
+            </div>
+
+
+        </div>
+        <div id="addcon"><p id="a2dbb2774639d179" style="display:none;"><input name="5443fcd666dbb18f" type="text" value="9f3be6a55f6fe407" maxlength="1000" id="5443fcd666dbb18f" /><input name="b3337be0a2dbda1d" type="text" value="dcfe1ce96f4d089c" id="b3337be0a2dbda1d" style="color:Azure;" /><input name="ba0baf8d5fff27fa" type="text" value="ca129f975a29c650" id="ba0baf8d5fff27fa" style="text1:none;" /><input name="ee2a3b630466cbe3" type="text" value="bcf940ae624c21b5" readonly id="ee2a3b630466cbe3" /><input name="8b0446639e4e01d7" type="text" value="b61f6b892cb9375a" maxlength="1000" readonly id="8b0446639e4e01d7" style="color:Azure;text1:none;" /><input name="f2e51bb3fb3c313e" type="text" value="c150ded46ec7291b" readonly id="f2e51bb3fb3c313e" /><input name="42bf8349073d0945" type="text" value="b7d47c8176228675" id="42bf8349073d0945" style="text1:none;" /></p></div>
+        <div style="display: none;">
+            <input name="txthidenv" type="hidden" id="txthidenv" value="werqwerqwer" />
+            <script type="text/javascript">
+                $("#txthidenv").val($("#txthidenv").val() + "aerwera");
+            </script>
+        </div>
+
+</body>
+</html>

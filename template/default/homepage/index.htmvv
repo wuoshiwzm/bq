@@ -1,0 +1,232 @@
+{template 'header'}
+
+<div class="ny_banner">
+    	
+    </div>
+    <div class="xiangqing">
+        <div class="xq_title">
+            <span>{$COM[company]}</span>
+        </div>
+        <div class="xq_con">
+            <div class="xq_left">
+                <div class="xqleft_top">
+                    <div class="top_title">
+                        {$COM[company]}
+                    </div>
+                    <div class="top_con">
+                        <p>地址： {$COM[address]} </p>
+                        <p>联系人： {$COM[truename]} </p>
+                        <p>电话： {$COM[telephone]} </p>
+                        <p>传真： {$COM[fax]}</p>
+                        <p>E-mail： {$COM[email]}</p>
+                    </div>
+                    <div class="top_title">
+                        主营业务
+                    </div>
+                    <div class="top_con">
+                        <p>{$COM[business]}</p>
+                    </div>
+                    <img src="images/xht.jpg" alt="">
+                </div>
+            </div>
+            <div class="xq_right">
+                <div class="xq_li">
+                    <ul>
+                        <li class="hover"><a href="#a1">公司简介</a></li>
+                        <li><a href="#a2">企业认证</a></li>
+                        <li><a href="#a3">公司资源</a></li>
+                        <li><a href="#a4">公司新闻</a></li>
+                        <li><a href="#a5">联系我们</a></li>
+                        <li><a href="#a6">招贤纳士</a></li>
+                        <li><a href="#a7">评论</a></li>
+                    </ul>
+                </div>
+                <p class="weizhia">当前位置: <a href="{DT_PATH}">网站首页</a>&nbsp;>&nbsp;<a href="{$COM[linkurl]}">{$COM[company]}</a></p>
+                <div class="xqb_title">
+                    <h1 id="a1">公司简介</h1>
+                </div>
+                <div class="xqb_con">
+                    <p>
+					{php $uid=$COM['userid'];}
+{php $utags=tag("table=company_data&condition=userid=$uid&template=null");}
+{loop $utags $u}
+{$u[content]}
+{/loop}
+</p>
+                </div>
+                <div class="xqb_title">
+                    <h1 id="a2">企业认证</h1>
+                </div>
+                <div class="xqb_con renzheng">
+                    <p>
+					{php $rtags=tag("table=validate&condition=type='company' and status=3 and username='$username'&pagesize=3&addtime desc&template=null");}
+					{loop $rtags $v}
+                        <img src="{$v[thumb]}" alt="">
+						{/loop}
+                    </p>
+                </div>
+                <div class="xqb_title">
+                    <h1 id="a3">公司资源</h1>
+                </div>
+                <div class="xqb_con xa_wap">
+                    <!-- <p>
+                        <img src="images/xian3.jpg" alt="">
+                    </p> -->
+                </div>
+                <div class="xqb_title">
+                    <h1 id="a4">公司新闻</h1>
+                </div>
+                 <div class="xqb_con">
+				 {php $ltags=tag("table=news&condition=status=3 and username='$username'&pagesize=5&order=addtime desc&template=null");}
+                  {loop $ltags $v}
+				   <div class="qyfwxm">
+                         <div class="qyfwxm_pic">
+                              <a href="{$v[linkurl]}"><img src="{imgurl($v[thumb])}" width="120" height="108"></a>
+                          </div>
+                           <div class="qyfwxm_left">
+                                <h2><a href="{$v[linkurl]}" style="color:red;">{$v[title]}</a></h2>
+                                <div class="clear"></div>
+                                 <p>{php $ntags=tag("table=news_data&condition=itemid=$itid&template=null");}
+                  {loop $ntags $t}
+                                      {dsubstr(strip_tags($t[content]),200)}...
+									  {/loop}
+                                   </p>
+                           </div>
+                           <div class="clear"></div>
+                   </div>
+				   {/loop}
+                    <!-- <div class="qyfwxm">
+                         <div class="qyfwxm_pic">
+                              <a href=""><img src="images/www.jpg" width="120" height="108"></a>
+                          </div>
+                           <div class="qyfwxm_left">
+                                <h2><a href=""style="color:red;">管理咨询服务</a></h2>
+                                <div class="clear"></div>
+                                 <p>
+                                      提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理知识和技能，提高科学决策和经营管理能力。指导企业加强现场管理，提高清洁生产水平。提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理...
+                                   </p>
+                           </div>
+                           <div class="clear"></div>
+                   </div>
+                    <div class="qyfwxm">
+                         <div class="qyfwxm_pic">
+                              <a href=""><img src="images/www.jpg" width="120" height="108"></a>
+                          </div>
+                           <div class="qyfwxm_left">
+                                <h2><a href=""style="color:red;">管理咨询服务</a></h2>
+                                <div class="clear"></div>
+                                 <p>
+                                      提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理知识和技能，提高科学决策和经营管理能力。指导企业加强现场管理，提高清洁生产水平。提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理...
+                                   </p>
+                           </div>
+                           <div class="clear"></div>
+                   </div>
+                    <div class="qyfwxm">
+                         <div class="qyfwxm_pic">
+                              <a href=""><img src="images/www.jpg" width="120" height="108"></a>
+                          </div>
+                           <div class="qyfwxm_left">
+                                <h2><a href=""style="color:red;">管理咨询服务</a></h2>
+                                <div class="clear"></div>
+                                 <p>
+                                      提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理知识和技能，提高科学决策和经营管理能力。指导企业加强现场管理，提高清洁生产水平。提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理...
+                                   </p>
+                           </div>
+                           <div class="clear"></div>
+                   </div>
+                    <div class="qyfwxm">
+                         <div class="qyfwxm_pic">
+                              <a href=""><img src="images/www.jpg" width="120" height="108"></a>
+                          </div>
+                           <div class="qyfwxm_left">
+                                <h2><a href=""style="color:red;">管理咨询服务</a></h2>
+                                <div class="clear"></div>
+                                 <p>
+                                      提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理知识和技能，提高科学决策和经营管理能力。指导企业加强现场管理，提高清洁生产水平。提供发展战略、财务管理、人力资源、市场营销等咨询诊断，帮助企业学习、掌握现代企业管理...
+                                   </p>
+                           </div>
+                           <div class="clear"></div>
+                   </div> -->
+                </div>
+                 <div class="xqb_title">
+                    <h1 id="a5">联系我们</h1>
+                </div>
+                <div class="xqb_con">
+                    <div class="product_wz" style="width:800px;line-height: 30px;font-size: 14px">
+                        <p>地址： {$COM[address]} </p>
+                        <p>联系人： {$COM[truename]} </p>
+                        <p>电话： {$COM[telephone]} </p>
+                        <p>传真：{$COM[fax]} </p>
+                        <p>E-mail： {$COM[email]}</p>
+
+                     </div>
+                </div>
+                <div class="xqb_title">
+                    <h1 id="a6">招贤纳士</h1>
+                </div>
+                <div class="pad_10">
+                        <table class="zptable" cellspacing="0"  cellpadding="0">
+                           <thead>
+                              <tr>
+                                <th width="163"> 职位信息</th>
+                                   <th width="184"> 薪资水平 </th>
+                               <th width="79"> 工作地点 </th>
+                               <th width="101"> 学历 </th>
+                                <th width="83"> 工作经验 </th>
+                            <th width="74"> 招聘人数 </th>
+                         <th width="74"> 更新时间 </th>
+                       </tr>
+                        </thead>
+                     <tbody>
+{php $ltags=tag("moduleid=9&table=job&condition=status=3 and username='$username'&pagesize=10&order=addtime desc&template=null");}
+                  {loop $ltags $t}
+                     <tr>
+                       <td class="t_w"><a href="{$t[linkurl]}">{$t[title]}</a></td>
+                       <td>{if $t[minsalary] && $t[maxsalary]}
+			{$t[minsalary]}-{$t[maxsalary]}{$DT[money_unit]}/月
+		{elseif $t[minsalary]}
+			{$t[minsalary]}{$DT[money_unit]}/月以上
+		{elseif $t[maxsalary]}
+			{$t[maxsalary]}{$DT[money_unit]}/月以内
+		{else}
+			面议
+		{/if}/月 </td>
+                          <td>{area_pos($t[areaid],'')}</td>
+                        <td>{$t[education]}</td>
+                        <td>{$t[experience]}</td>
+                       <td>{if $t[total]}{$t[total]}{else}若干{/if}人</td>
+                     <td>{timetodate($t[addtime],3)}</td>
+                     </tr>
+					 {/loop}
+                       </tbody>
+                        </table>
+                 </div>
+                    <div class="xqb_title">
+                     <h1 id="a7">评论</h1>
+                     </div> 
+                     <div class="liuyan">
+
+
+<div id="comment_div" style="display:;">
+	<div class="main_head"><div><span class="f_r px12">共<span id="comment_count">0</span>条&nbsp;&nbsp;</span><strong><span id="message_title">相关评论</span></strong></div></div>
+	<div class="main_body"><script type="text/javascript">Df('{DT_PATH}api/comment.php?mid={$moduleid}&itemid={$COM[userid]}&proxy={$comment_proxy}', 'id="destoon_comment" style="width:100%;"');</script></div>
+</div>
+
+
+
+<!-- 
+            <textarea name="text" id="" class="smohan_text"></textarea>
+            <input type="button" class="fabu" value="发布">
+            <div class="clear"></div> -->
+            
+                   </div>
+             </div>
+             <div class="clear"></div>
+             <a href=""> <img src="/images/guanggao.jpg" alt="" class="xq_mei"> </a>
+     </div>
+    </div> 
+
+
+
+ 
+{template 'footer'}

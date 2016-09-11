@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*头部*/
+.H { background: rgb(255, 255, 255); margin: 2px 0px 0px; width: 100%; height: 95px; }
+.header { width: 1000px; height: 95px; display: block; }
+.logo { padding: 10px 0px 0px; width: 215px; height: 77px; float: left; }
+.logo a { display: block; float: left; }
+.logoff { display: none; }
+.inp7 { margin: 30px 0px 0px 100px; width: 93px; height: 41px; text-align: center; line-height: 41px; float: left; }
+.inp7 a { background: url("../images/sprite.png") 0px -955px; width: 93px; height: 41px; display: block; }
+.inp8 { margin: 30px 0px 0px; border: 1px solid rgb(224, 224, 224); width: 320px; height: 39px; line-height: 38px; float: left; display: block; }
+.inp10 { margin: 30px 0px 0px; width: 66px; height: 41px; float: left; }
+.inp10 a { background: url("../images/sprite.png") 0px -30px; width: 66px; height: 41px; display: block; }
+.inp9 { margin: 25px 0px 0px; width: 110px; height: 41px; float: left; }
+.inp9 a { background: url("../images/sprite.png") 0px -312px; padding: 5px 0px 0px 15px; width: 110px; height: 41px; color: rgb(255, 255, 255); line-height: 41px; overflow: hidden; clear: right; float: left; display: block; }
+.huozhe { padding: 30px 0px 0px; width: 55px; height: 40px; text-align: center; color: rgb(153, 153, 153); line-height: 40px; float: left; }
+
+/*导航*/
+.N { background: rgb(255, 255, 255); width: 100%; height: 40px; }
+.nav { background: rgb(255, 255, 255); width: 1000px; height: 40px; font-family: "微软雅黑"; position: relative; }
+.navbox { padding: 0px; width: 980px; height: 40px; float: left; }
+.navbox ul { width: 980px; height: 40px; display: block; }
+.navbox ul li { width: 140px; height: 40px; text-align: center; line-height: 40px; float: left; }
+.navbox ul li a { width: 140px; height: 40px; color: rgb(0, 0, 0); line-height: 40px; font-size: 16px; display: block; }
+.navbox ul li a:hover { background: #FF0000; color: rgb(255, 255, 255); }
+.phone { left: 1043px; top: 0px; width: 140px; height: 30px; text-align: right; line-height: 40px; position: absolute; display: none; }
+.PHbg { background: url("../images/sprite.png") no-repeat 0px -591px; margin: 8px 0px 0px; width: 15px; height: 23px; float: left; }
+.phone span { font-family: "黑体"; font-size: 20px; font-style: italic; color: #fece3d; }
+.currentB { background:#FF0000; color: rgb(255, 255, 255) !important; }
+
+/*步骤样式*/
+.daohangtiao { margin: 20px auto; width: 1000px; overflow: hidden; }
+.daohangtiao li { width: 250px; height: 70px; float: left; position: relative; }
+.daohangtiao .step .step_deco { width: 250px; height: 2px; display: block; background-color: rgb(228, 227, 227); }
+.daohangtiao .step .step_deco_on { width: 250px; height: 2px; display: block; background-color: rgb(255, 103, 0); }
+.daohangtiao .step .step_val { background: url("../images/sprite.png") no-repeat 0px -1552px; left: 100px; top: -15px; width: 32px; height: 32px; text-align: center; color: rgb(102, 102, 102); line-height: 32px; font-size: 16px; font-weight: bold; display: block; position: absolute; }
+.daohangtiao .step .val_on { background: url("../images/sprite.png") no-repeat 0px -1504px; left: 100px; top: -15px; width: 32px; height: 32px; text-align: center; color: rgb(255, 255, 255); line-height: 32px; display: block; position: absolute; }
+.daohangtiao .step .step_title .typ_ver { width: 250px; text-align: center; line-height: 30px; padding-top: 20px; font-family: "宋体"; display: block; }
+.daohangtiao .step .step_title .opt_ver { width: 250px; text-align: center; color: rgb(255, 84, 0); line-height: 30px; padding-top: 20px; font-family: "宋体"; font-size: 14px; font-weight: bold; display: block; }
+.step { margin-top: 40px; }
+
+/*内容*/
+.main { background: rgb(255, 255, 255); margin: 20px auto; border: 1px solid rgb(229, 229, 229); width: 1000px; }
+.biaoti { padding: 20px 0px 0px; width: 1000px; height: 60px; text-align: center; line-height: 60px; }
+.biaoti span { color: rgb(0, 0, 0); font-size: 34px; font-family: "Microsoft Yahei"; }
+.zhuce { background: rgb(255, 251, 221); width: 1000px; height: 38px; line-height: 38px; }
+.zhuce span { margin: 15px 0px 0px 50px; color: rgb(153, 153, 153); line-height: 38px; font-family: Microsoft Yahei; }
+.zhuce span a { color: rgb(106, 169, 228); }
+.BTwenzi { margin: 30px 0px 0px 30px; }
+.BTwenzi .ziti1 { padding: 0px 0px 0px 13px; color: rgb(0, 0, 0); font-size: 18px; font-family: "Microsoft Yahei"; }
+.BTwenzi .ziti2 { padding: 0px 0px 0px 10px; color: rgb(153, 153, 153); }
+.BTwenzi a { margin: 10px 0px 0px 20px; display: inline-block; float: left; line-height: 22px; border-left: 4px solid #FF0000; }
+.inp1 { margin: 0px 0px 0px 17px; border: 1px solid rgb(224, 224, 224); width: 580px; height: 36px; line-height: 38px; font-family: "微软雅黑"; float: left; }
+.inpp1 { width: 350px; }
+.inpp2 { width: 200px; }
+.bianhao { float: left; *margin: 5px 0 0 30px; }
+.bianhao2 { margin: 30px 0 0 120px; *margin: 5px 0 0 120px; }
+.XXwenzi .ziti1 { margin: 0px 0px 0px 10px; color: rgb(0, 0, 0); font-size: 18px; font-family: "Microsoft Yahei"; }
+.XXwenzi a { margin: 0px 0px 0px 20px; display: inline-block; line-height: 22px; border-left: 4px solid #FF0000; }
+.XXwenzi { margin: 30px 0px 0px 30px; }
+.XXwenzi1 { margin: 20px 0px 0px 50px; }
+.shuru { border-top: 1px solid #e8e8e8; width: 900px; margin: 10px 50px; }
+.XXwenzi1 .shouji { padding: 0 0 0 56px; }
+.XXwenzi1 .lxr { padding: 0 0 0 42px; }
+.XXwenzi1 .yzm { padding: 0 0 0 42px; }
+.SJwenzi { margin: 30px 0px 0px 30px; *margin: 5px 0px 0px 30px; float: left; }
+.SJwenzi .ziti1 { padding: 0px 0px 0px 10px; color: rgb(0, 0, 0); font-size: 18px; font-family: "Microsoft Yahei"; }
+.SJwenzi a { margin: 10px 0px 0px 20px; display: inline-block; line-height: 22px; border-left: 4px solid #FF0000; }
+.SJwenzi .ziti2 { margin: 0px 0px 0px 10px; color: rgb(153, 153, 153); }
+.NR { margin: 30px 0px 0px 20px; *margin: 10px 0 0 20px; width: 500px; height: 40px; float: left; }
+.SJwenzi1 { width: 350px; height: 40px; text-align: left; line-height: 36px; }
+.inp4 { border: 0px currentColor; width: 160px; height: 34px; line-height: 34px; float: left; display: block; }
+.inp11 { border: 0px; width: 155px; height: 34px; line-height: 34px; float: left; display: block; }
+.SJwenzi1 span { float: left; display: block; }
+.bmks { margin: 0px 0px 0px 20px; width: 220px; height: 34px; border-top-color: rgb(224, 224, 224); border-bottom-color: rgb(224, 224, 224); border-left-color: rgb(224, 224, 224); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; float: left; }
+.bmjz { margin: 0px 0px 0px 20px; width: 220px; height: 34px; border-top-color: rgb(224, 224, 224); border-bottom-color: rgb(224, 224, 224); border-left-color: rgb(224, 224, 224); border-top-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-bottom-style: solid; border-left-style: solid; float: left; }
+.SJwenzi1 a { background: url("../images/sprite.png") -411px -488px; width: 29px; height: 34px; overflow: hidden; float: right; display: block; }
+.inp5 { margin: 10px 0px 0px 30px; border: 1px solid rgb(224, 224, 224); width: 215px; height: 35px; line-height: 35px; }
+.inp6e { border: 1px solid rgb(204, 204, 204); width: 130px; height: 30px; text-align: center; color: rgb(102, 102, 102); line-height: 30px; display: inline-block; cursor: pointer; background-color: rgb(224, 224, 224); }
+.inp6 { border: 1px solid #FF0000; width: 130px; height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px; display: inline-block; cursor: pointer; background-color: #FF0000; }
+.inp6:hover { border: 2px solid #FF0000; }
+.inp12 { margin: 10px 0px 0px 30px; border: 1px solid rgb(224, 224, 224); width: 100px; height: 35px; line-height: 35px; }
+.ZBwenzi { margin: 30px 0px 0px 50px; }
+.ZBwenzi .ziti1 { padding: 0px 0px 0px 10px; color: rgb(0, 0, 0); font-size: 18px; font-family: "Microsoft Yahei"; }
+.ZBwenzi .ziti2 { padding: 0px 0px 0px 20px; color: rgb(153, 153, 153); font-size: 12px; }
+.ZBwenzitit { display: inline-block; line-height: 22px; border-left: 4px solid #FF0000; }
+.ZBwenzi .ziti2 a { border: 1px solid #999; background: #fcfcfc; line-height: 24px; margin: 0 10px; padding: 0 5px; display: inline-block; border-radius: 2px; }
+.ZBwenzi .ziti2 a:hover { background: #ececec; }
+.chajian { margin: 15px 0px 0px 50px; width: 900px; height: 260px; border: 1px solid #ddd; }
+.sumbit { padding: 50px 0 50px 450px; }
+.sumbit a { background: #FF0000; padding: 0 60px; font-size: 20px; color: #fff; line-height: 50px; display: inline-block; border-radius: 3px; }
+.sumbit a:hover { background: #2877e6; }
+
+.sumbit p { padding: 0 0 0 25px; line-height: 30px; font-size: 12px; color: #999; }
+/*地区列表自定义*/
+.dvarealist { background-color: #fff; width: 510px; border: 1px solid #ccc; position: absolute; left: 412px; top: 789px; }
+.dvarealist { background-color: #fff; width: 510px; border: 1px solid #ccc; position: absolute; left: 414px\0; top: 789px; }
+/*IE8*/
+.dvarealist { background-color: #fff; width: 510px; border: 1px solid #ccc; position: absolute; left: 414px\9 \0; top: 789px; }
+/*IE9,10*/
+.wrap { color: #666; font-size: 12px; }
+.wrap td { line-height: 30px; color: #999; }
+.ma10 { margin-top: 20px; margin-bottom: 10px; }
+.ma10 table { margin-left: 5px; margin-right: 5px; }
+.ma10 strong { color: #333; }
+.wrap td input { height: 14px; width: 14px; }
+.fr { float: right; padding-top: 10px; padding-bottom: 20px; }
+.fr a { width: 55px; height: 22px; line-height: 22px; text-align: center; font-size: 12px; display: block; float: left; margin-right: 10px; border: 1px solid #e7e7e7; background-color: #fff; color: #666; border-radius: 3px; }
+.fr .aareasure { background: #f60; color: #fff; }
+.fr .aareaclear:hover, .fr .aareaclose:hover { background: #e7e7e7; }
+.mal { background-color: #fff; }
+.red { color: #f60; font-weight: bold; padding-left: 16px; }
+
+
+
+@media screen and (min-width:1200px) {
+    .topbox { width: 1200px; }
+    .header { width: 1200px; }
+    .logo { width: 418px; }
+    .logoff { display: block; float: left; }
+    .inp7 { margin: 30px 0 0 100px; }
+    .nav { width: 1200px; }
+    .phone { display: block; }
+    .daohangtiao { width: 1200px; }
+    .daohangtiao li, .daohangtiao .step .step_deco, .daohangtiao .step .step_deco_on, .daohangtiao .step .step_title .typ_ver, .daohangtiao .step .step_title .opt_ver { width: 300px; text-align: center; }
+    .daohangtiao .step .val_on { left: 130px; }
+    .daohangtiao .step .step_val { left: 130px; }
+    .main { width: 1200px; }
+    .zhuce { width: 1200px; }
+    .inp11 { width: 160px; }
+    .shuru { width: 1100px; }
+    .chajian { width: 1080px; }
+}

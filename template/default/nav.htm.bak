@@ -1,0 +1,27 @@
+<div class="nav">
+        <li {if $moduleid<4}class="select"{/if}>
+            <a href="{DT_STATIC}"><p class="nav_top">SHOUYE</p><p class="nav_bottom">网站首页</p></a>
+        </li>
+         <li {if $moduleid==4 && $catid==3}class="select"{/if}>
+            <a href="{DT_STATIC}company/list.php?catid=3"><p class="nav_top">GUANGGAO</p><p class="nav_bottom">广告媒体</p></a>
+        </li>
+        <li {if $moduleid==4 && $catid==110}class="select"{/if}>
+            <a href="{DT_STATIC}company/list.php?catid=110"><p class="nav_top">SHEJI</p><p class="nav_bottom">创意设计</p></a>
+        </li>
+        <li {if $moduleid==4 && $catid==111}class="select"{/if}>
+            <a href="{DT_STATIC}company/list.php?catid=111"><p class="nav_top">CEHUA</p> <p class="nav_bottom">活动策划</p></a>
+        </li>
+        <li {if $moduleid==18}class="select"{/if}>
+            <a href="{DT_STATIC}ZIMEITI/"><p class="nav_top">ZIMEITI</p><p class="nav_bottom">自媒体</p></a>
+        </li>
+        <li {if $moduleid==26}class="select"{/if}>
+            <a href="{$MODULE[26][linkurl]}"><p class="nav_top">ZHAOBIAO</p><p class="nav_bottom">热门招标</p></a>
+        </li>
+        <li {if $moduleid==22}class="select"{/if}>
+            <a href="{DT_STATIC}invest/list.php?catid=204"><p class="nav_top">PENGYOU</p><p class="nav_bottom">招商中心</p></a>
+        </li>
+       
+        <li {if $moduleid==21}class="select"{/if}>
+            <a href="{DT_STATIC}news/list.php?catid=203"><p class="nav_top">BAIKEZILIAO</p><p class="nav_bottom">百科资料</p></a>
+        </li>
+    </div>

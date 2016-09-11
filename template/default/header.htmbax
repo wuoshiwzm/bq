@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
+{if $head_keywords}
+<meta name="keywords" content="{$head_keywords}"/>
+{/if}
+{if $head_description}
+<meta name="description" content="{$head_description}"/>
+{/if}
+<link rel="stylesheet" media="screen" href="{DT_STATIC}file/css/style.css" />
+<link rel="stylesheet" media="screen" href="{DT_STATIC}file/css/ny.css" />
+
+<link rel="stylesheet" media="screen" href="{DT_SKIN}style.css" />
+
+<script type="text/javascript" src="{DT_STATIC}file/js/jquery.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/js/jquery.jslides.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/js/link.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/js/script.js"></script>
+
+
+
+{if !DT_DEBUG}<script type="text/javascript">window.onerror=function(){return true;}</script>{/if}
+<script type="text/javascript" src="{DT_STATIC}lang/{DT_LANG}/lang.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/config.js"></script>
+<!-- <script type="text/javascript" src="{DT_STATIC}file/script/jquery.js"></script> -->
+<script type="text/javascript" src="{DT_STATIC}file/script/common.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/page.js"></script>
+{if $lazy}<script type="text/javascript" src="{DT_STATIC}file/script/jquery.lazyload.js"></script>{/if}
+{if $JS}
+{loop $JS $js}
+<script type="text/javascript" src="{DT_STATIC}file/script/{$js}.js"></script>
+{/loop}
+{/if}
+{php $searchid = ($moduleid > 3 && $MODULE[$moduleid]['ismenu'] && !$MODULE[$moduleid]['islink']) ? $moduleid : 5;}
+<script type="text/javascript">
+{if $head_mobile && $EXT[mobile_goto]}
+GoMobile('{$head_mobile}');
+{/if}
+var searchid = {$searchid};
+{if $itemid && $DT[anticopy]}
+document.oncontextmenu=function(e){return false;};
+document.onselectstart=function(e){return false;};
+{/if}
+</script>
+
+</head>
+
+<body onload="time()">
+<div class="top">
+<div class="wrappersy">
+    <div class="logo">
+        <a href=""><img src="{DT_STATIC}file/images/logo.jpg" /></a>
+    </div>
+    <div class="top_right">
+        <div class="rig_top">
+            <div class="city">{$city_name} <span><a href="{DT_PATH}api/city.php" style="color:#fff;">[ 切换城市：咸阳 铜川 ]</a></span></div>
+            <div class="welocome">欢迎光临西安步旗广告传播有限公司网络平台!</div>
+            <div class="data">
+                <span id="info1">
+</span><script language="javascript" type="text/javascript">
+
+//js获取日期
+function time()
+{
+  var now= new Date();
+  var year=now.getFullYear();
+  var month=now.getMonth();
+  var date=now.getDate();
+//写入相应id
+ document.getElementById("info1").innerHTML="今天是："+year+"年"+(month+1)+"月"+date+"日";
+} 
+
+</script>
+                <iframe width="450" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=1&py=xian&wind=1&num=2"></iframe>
+            </div>
+        </div>
+		    {template 'nav'}
+    <form id="destoon_search" action="/api/search.php" onsubmit="return Dsearch(1);">
+    <div class="search">
+	
+	<input type="hidden" name="moduleid" value="{$searchid}" id="kw_moduleid"/>
+	<input type="hidden" name="spread" value="0" id="destoon_spread"/>
+	<input type="hidden" name="submit" value="1" id="submit"/>
+        <input type="text" class="sousuo" name="kw" value="{if $kw}{$kw}{else}请输入关键词{/if}" onfocus="if(this.value=='请输入关键词') this.value='';"{if $DT[search_tips]} onkeyup="STip(this.value);" autocomplete="off"{/if} x-webkit-speech speech>
+        <div>
+            <select id="" class="hangye" onchange="setModule1(this.value,'this')">
+			{loop $MODULE $m}
+			{if $m[ismenu] && !$m[islink]}
+                <option value="{$m[moduleid]}" {if $moduleid==$m[moduleid]}select{/if}>{$m[name]}</option>
+				{/if}
+               {/loop}
+            </select>
+        </div>
+        <input type="submit" value=""   class="btn">
+		
+		<script>
+function setModule1(i, o) {
+Dd('kw_moduleid').value = i;
+searchid = i;
+var lis = Dd('kw_module').getElementsByTagName('li');
+for(var i=0;i<lis.length;i++) {
+lis[i].className = lis[i] == o ? 'current' : '';
+}
+}
+</script>
+
+    </div>
+    <div class="quyu">
+       <select id="areaid" name="areaid" class="quyua">
+	   {php $ares=get_mainarea(0);}
+	   
+            <option value="-1">区域</option>
+			{loop $ares $v}
+            <option value="{$v[areaid]}" {if $areaid==$v[areaid]}selected{/if}>{$v[areaname]}</option>
+			{/loop}
+        </select>
+        <select id="day" name="day" class="quyua">
+            <option value="-1">档期</option>
+            <option value="1" {if $day==1}selected{/if}>1天内</option>
+			 <option value="3" {if $day==3}selected{/if}>3天内</option>			
+			 <option value="7" {if $day==7}selected{/if}>7天内</option>
+			 <option value="15" {if $day==15}selected{/if}>15天内</option>
+			 <option value="30" {if $day==30}selected{/if}>30天内</option>
+        </select>
+        <!--<select id="" class="quyua">位置
+            <option value="-1">位置</option>
+            <option value="">地区搜索</option>
+        </select>   -->
+    </div></form>
+</div>
+</div>
+</div>

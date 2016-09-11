@@ -1,0 +1,1 @@
+document.write('<img src="/skin/default/images/pic_190&#120;200.gif" width="270" height="200" alt=""/>');

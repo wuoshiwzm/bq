@@ -1,0 +1,101 @@
+{template 'head'}
+ <div class="ny_banner">
+    	
+    </div>
+<div class="meiti">
+       <div class="title">
+           <img src="{DT_STATIC}file/images/meiti.jpg" alt=""> <!-- {$CAT[catname]} -->
+       </div>
+       <div class="meiti_con">
+           <div class="ul">
+                <ul class="flleft ac">
+					 {php $cats=get_cat($catid);}
+					 {php $bid=$cats['parentid'];}
+					{loop $maincat $i $m}
+					 
+					 
+					{if $i<6}
+			    
+						 <li {if $m[catid]==$catid } class="hover cc"{else}class="cc"{/if} id="meiti{$i}" onMouseover="setTab('meiti',{$i},10)">
+                        <a href="{$MOD[linkurl]}{$linkurl}"><h1>{$m[catname]}</h1></a>
+                        <a href="{$MOD[linkurl]}{$linkurl}">{$m[catdir]}</a>
+                        <div class="ex">
+						  {php $childs = get_maincat($m[catid], $moduleid, 1);}
+							{loop $childs $j $c}
+                            <p><a href="{$MOD[linkurl]}{$c[linkurl]}">{$c[catname]}</a></p>
+							{/loop}
+     
+                        </div>
+                     </li>
+					 {/if}
+					{/loop}
+                    
+                </ul>
+            <div class="meiti_box">
+		
+					 
+					{loop $maincat $ii $m}
+					{php $child = get_maincat(0, $CATEGORY, 1);}
+					 
+                <div id="con_meiti_{$f}" {if $ii==1}class="display" style="display: block;"{else}class="hidden" style="display: none;"{/if}> 
+                    <div class="bol_con">
+					<!--{php $ftags=tag("moduleid=$moduleid&length=46&table=company&catids=".$m[catid]."&pagesize=6&template=null");}-->   
+						{loop $ftags $k $t}  
+						<!-- {php echo"<pre>";print_R($f)} -->
+                        <div class="xi">
+                            <a href="{$t[linkurl]}"><img src="{imgurl($t[thumb])}" alt=""></a>
+                            <div class="xi_title">
+                                <a href="{$t[linkurl]}"><h1>{$t[company]}</h1></a>
+                                <a href="{$t[linkurl]}"><p>主营：{$t[business]}</p></a>
+                            </div>
+                        </div>
+                        {/loop}
+                        <div class="clear"></div>
+                    </div>
+                </div>
+				{/loop}
+			
+		
+               
+            </div>
+                 <ul class="flright bc">
+					 
+				 	{loop $maincat $jj $m}
+					 
+					 
+					{if $jj>=6}
+					 
+			    
+					 
+					 
+					   <li {if $m[catid]==$catid} class="hover dc"{else}class="dc"{/if} id="meiti{$jj}" onMouseover="setTab('meiti',{$jj},10)">
+                            <a href="{$MOD[linkurl]}{$m[linkurl]}"><h1>{$m[catname]}</h1></a>
+                        <a href="{$MOD[linkurl]}{$v[linkurl]}">{$m[catdir]}</a>
+                        <div class="ex">
+                          {php $childs = get_maincat($m[catid], $moduleid, 1);}
+							{loop $childs $i $c}
+                            <p><a href="{$MOD[linkurl]}{$c[linkurl]}">{$c[catname]}</a></p>
+							{/loop}
+                        </div>
+                     </li>
+					{/if}
+					{/loop}
+					      
+                     
+                </ul>
+           </div>
+           <div class="baike_bot bot mei">
+         {php $utags=tag("moduleid=4&condition=vip>0 and level=1&pagesize=12&showcat=1&order=vip desc,userid desc&template=null");}
+{loop $utags $v}
+    <li>
+        <span class="fli">{$v[truename]}</span>
+        <span>{timetodate($v[regtime],2)}</span>
+        <!-- <span>浏览了</span> -->
+        <span><a href="{$v[linkurl]}">{$v[company]}</a></span>
+        <span>{$v[catname]}</span>
+    </li>
+	{/loop}
+        </div>
+       </div>
+   </div>
+{template 'footers'}

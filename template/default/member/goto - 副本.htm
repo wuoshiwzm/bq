@@ -1,0 +1,60 @@
+{template 'header'}
+
+
+
+
+  <div class="ny_banner">
+    	
+    </div>
+    <style>
+            .reg_flow1 {
+                height: 35px;
+                line-height: 35px;
+                margin: 15px 0
+            }
+            
+            .reg_flow1 ul li {
+                float: left;
+                width: 232px;
+                font-family: "微软雅黑";
+                font-size: 16px;
+                color: #000;
+                padding-left: 30px;
+            }
+            
+      .reg_flow1 ul li.current {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+    <div class="wrapper">
+            <div class="reg_flow1">
+                <ul>
+                    <li>
+                        1.填写用户名和密码
+                    </li>
+                    <li>
+                        2.完善资料
+                    </li>
+                    <li class="current">
+                        3.注册成功
+                    </li>
+                </ul>
+            </div>
+            <div class="backpw_info reg_step1">
+			{if $action == 'register_success'}
+                <div class="zccg">
+                    <img src="/images/zccg.png">
+                    <a   class="login2015_12_13_01">正在立即登录...</a>
+					{php die($url);}
+                </div>
+				<meta http-equiv="refresh" content="3;URL={$url}"/>
+				{/if}
+     </div>
+     </div>
+
+
+ 
+
+ 
+{template 'footer'}

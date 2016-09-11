@@ -1,0 +1,108 @@
+{template 'head'}
+    <div class="ny_banner">
+    	
+    </div>
+    <div class="ny_main">
+    	<div class="baike_top">
+    		<div class="bktop_left">
+
+<ul>
+				{loop $tags $i $t}
+				
+    			<li>
+    				<img src="{if !$t[thumb]}{DT_STATIC}file/image/image1.jpg{else}{$t['thumb']}{/if}" alt="{$t[title]}">
+				
+    				<div class="pi">
+    					<p><a href="{$t[linkurl]}">{$t[title]}	</a></p>
+    					<p>{dsubstr($t[introduce], 200, '...')}</p>
+    				</div>
+    			</li>
+				{/loop}
+    			<div class="fenye">
+    				{$pages}
+    			</div>
+    		</div>
+    		<div class="bktop_right">
+    			<div class="bkr_top">
+    				<h1>热门资讯</h1>
+					<!--{php $tags=tag("moduleid=$moduleid&length=46&condition=status=3&areaid=$cityid&pagesize=7&order=hits desc&template=null");}-->          
+				{loop $tags $k $t}  
+				{if $k==0}
+			
+    				<li class="ra">
+    					<p>	<a href="{$t[linkurl]}">{dsubstr($t[title], 30, '...')}</a></p>
+    					<div>
+    						<img src="{if $t[thumb]==""}{DT_STATIC}file/image/image1.jpg{$t['thumb']}{else}{$t['thumb']}{/if}" alt="{$t[title]}">
+    						<p>{dsubstr($t[introduce], 90, '...')}<span><a href="" class="red">详细</a></span></p>
+    						<div class="clear"></div>
+    					</div>
+    				</li>
+				{else}
+		
+				 <li> 
+				   <a href="{$t[linkurl]}" rel="external nofollow" target="_blank" class="item"> 
+					 <span class="txt f-ib f-thide">{$t[title]}</span> 
+				   </a>              
+				 </li>
+				 {/if}
+				{/loop}
+				
+    			</div>
+    			<div class="bkr_bot">
+    				<h1>最新推荐</h1>
+			
+					<!--{php $tags=tag("moduleid=$moduleid&length=46&condition=status=3 and level=3 and thumb!=''&areaid=$cityid&pagesize=4&order=hits desc&template=null");}-->   
+					{loop $tags $k $t}  
+					
+    				<div>
+    					<img src="{$t[thumb]}" alt="">
+    					<p><a href="{$t[linkurl]}">{dsubstr($t[title], 24, '...')}</a></p>
+    				</div>
+					{/loop}
+    		
+    			</div>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
+    	<div class="baike_bot bot baikeaa">
+    		        {php $utags=tag("moduleid=4&condition=groupid>5&areaid=$cityid&pagesize=8&showcat=1&order=vip desc,userid desc&template=null");}
+{loop $utags $v}
+    <li>
+        <span class="fli">{$v[truename]}</span>
+        <span>{timetodate($v[regtime],2)}</span>
+        <!-- <span>浏览了</span> -->
+        <span><a href="{$v[linkurl]}">{$v[company]}</a></span>
+        <span>{$v[catname]}</span>
+    </li>
+	{/loop}
+    		<!-- <li>
+       			 <span class="fli">张三</span>
+       			 <span>13.20</span>
+        		 <span>浏览了</span>
+        		 <span><a href="">西安步旗文化广告传播公司</a></span>
+       			 <span>求购公司</span>
+    		</li>
+    		<li>
+       			 <span class="fli">张三</span>
+       			 <span>13.20</span>
+        		 <span>浏览了</span>
+        		 <span><a href="">西安步旗文化广告传播公司</a></span>
+       			 <span>求购公司</span>
+    		</li>
+    		<li>
+       			 <span class="fli">张三</span>
+       			 <span>13.20</span>
+        		 <span>浏览了</span>
+        		 <span><a href="">西安步旗文化广告传播公司</a></span>
+       			 <span>求购公司</span>
+    		</li>
+    		<li>
+       			 <span class="fli">张三</span>
+       			 <span>13.20</span>
+        		 <span>浏览了</span>
+        		 <span><a href="">西安步旗文化广告传播公司</a></span>
+       			 <span>求购公司</span>
+    		</li> -->
+    	</div>
+    </div>
+	{template 'footer'}

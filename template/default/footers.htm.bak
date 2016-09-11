@@ -1,0 +1,167 @@
+
+
+<div class="footer">
+    <div class="fot_main">
+        <img src="{DT_STATIC}file/images/footlogo.jpg" class="fotlogo" />
+        <div class="mian_com">
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="fot_bot ">
+                <p class="left">{$DT[copyright]}</p>                 
+                <p class="right"> <!-- 网站总浏览量：1234  今日浏览量：230  当前在线人数：20人 --></p>
+            </div>  
+        </div>
+        <div class="rig_fot">
+            <img src="{DT_STATIC}file/images/weixin.jpg" alt="" />
+            <p>微信扫一扫</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="fot_right">
+	<div class="zctop"><a href="{$MODULE[26][linkurl]}">招标</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+			{php $ztags=tag("moduleid=26&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+		<!-- <li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+        <li><a href="">自贡市第三人民医院医用X..</a></li>
+		<li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li> -->
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+	<div class="zctop"><a href="{$MODULE[22][linkurl]}">招商</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+{php $ztags=tag("moduleid=22&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+	 
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+</div>
+<div class="fot_left">
+	<div class="zctop"><a href="{$MODULE[5][linkurl]}">出租</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+			{php $ztags=tag("moduleid=5&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+		<!-- <li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+        <li><a href="">自贡市第三人民医院医用X..</a></li>
+		<li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li> -->
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+        <div class="zctop"><a href="{$MODULE[6][linkurl]}">求购</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+			{php $ztags=tag("moduleid=6&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+		 
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+</div>
+
+
+
+<script type="text/javascript">
+{if $destoon_task}
+show_task('{$destoon_task}');
+{else}
+{php include DT_ROOT.'/api/task.inc.php';}
+{/if}
+{if $lazy}$(function(){$("img").lazyload();});{/if}
+</script>
+
+</body>
+</html>

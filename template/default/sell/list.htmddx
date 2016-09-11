@@ -1,0 +1,189 @@
+{template 'head'}
+
+
+<div class="ny_banner">
+    	
+    </div>
+   <div class="meiti">
+       <div class="title">
+           <img src="/file/images/meiti.jpg" alt="">
+       </div>
+       <div class="meiti_con">
+           <div class="ul">
+                <ul class="flleft ac">
+{php $cats=get_cat($catid);}
+{php $paid=$cats['parentid'];}
+{if !$paid}
+{php $paid=$catid;}
+{/if}
+                    {php $maclids=get_maincat($paid,$moduleid,1);}
+					{php $nn=count($maclids);}
+					{loop $maclids $i $c}
+					{if $i<5}
+					 <li class="{if !$i}hover {/if}cc" id="meiti{$i+1}" onMouseover="setTab('meiti',{$i+1},{$nn})">
+                        <a href="{cat_url($c[catid])}"><h1>{$c[catname]}</h1></a>
+                        <a href="{cat_url($c[catid])}">{$c[catdir]}</a>
+                        <div class="ex">
+						{php $scalids=get_maincat($c['catid'],$moduleid,1);}
+						{loop $scalids $j $s}
+                            <p><a href="{cat_url($s[catid])}">{$s[catname]}</a></p>
+							{/loop}
+                            <!-- <p><a href="">楼宇电视</a></p>
+                            <p><a href="">公交车电视</a></p>
+                            <p><a href="">地铁电视</a></p>
+                           
+                            <p><a href="">其他</a></p> -->
+                        </div>
+                     </li>
+					 {/if}
+					 {/loop}
+                     <!-- <li class="cc" id="meiti2" onMouseover="setTab('meiti',2,10)">
+                          <a href="#"><h1>电梯广告</h1></a>
+                        <a href="#">DIANTIGUANGGAO</a>
+                          <div class="ex">
+                             <p><a href="">看板</a></p>
+                            <p><a href="">楼宇电视</a></p>
+                            <p><a href="">电梯门</a></p>
+                            <p><a href="">刷屏机</a></p>
+                            <p><a href="">电梯按钮</a></p>
+                            <p><a href="">其他</a></p>
+                        </div>
+                     </li>
+                     <li class="cc" id="meiti3" onMouseover="setTab('meiti',3,10)">
+                          <a href="#"><h1>报刊广告</h1></a>
+                          <a href="#">  BAOKANGUANGGAO</a>
+                          <div class="ex">
+                            <p><a href="">陕西地区</a></p>
+                            <p><a href="">华商报</a></p>
+                        </div>
+                     </li>
+                     <li class="cc" id="meiti4" onMouseover="setTab('meiti',4,10)">
+                          <a href="#"><h1>公交广告</h1></a>
+                          <a href="#">GONGJIAOGUANGGAO</a>
+                          <div class="ex">
+                            <p><a href="">公交车体广告</a></p>
+                            <p><a href="">公交车内广告</a></p>
+                            <p><a href="">公交移动电视广告</a></p>
+                            <p><a href="">公交车座广告</a></p>
+                            <p><a href="">报站广告</a></p>
+                            <p><a href="">其他</a></p>
+                        </div>
+                     </li>
+                      <li class="cc" id="meiti5" onMouseover="setTab('meiti',5,10)">
+                          <a href="#"><h1>户外广告</h1></a>
+                          <a href="#">HUWAIGUANGGAO</a>
+                          <div class="ex" style="top:-60px;">
+                            <p><a href="">单立柱大牌</a></p>
+                            <p><a href="">灯箱</a></p>
+                            <p><a href="">三面翻</a></p>
+                            <p><a href="">LED屏</a></p>
+                            <p><a href="">候车亭</a></p>
+                            <p><a href="">楼顶</a></p>
+                            <p><a href="">桥体</a></p>
+                            <p><a href="">桥墩</a></p>
+                            <p><a href="">墙体</a></p>
+                            <p><a href="">宣传栏</a></p>
+                            <p><a href="">道旗</a></p>
+                            <p><a href="">广告车</a></p>
+                            <p><a href="">地下通道</a></p>
+                            <p><a href="">其他</a></p>
+                        </div>
+                     </li> -->
+                </ul>
+            <div class="meiti_box">
+{loop $maclids $i $c}
+ {php $caid=$c['catid'];}
+                <div id="con_meiti_{$i+1}" {if !$i}class="display" style="display: block;"{else}class="hidden" style="display:none"{/if}> 
+                    <div class="bol_con">
+					{if !$i}
+					{php $caid=$catid;}
+					{/if}
+					{php $utags=tag("moduleid=5&condition=status=3&catid=$caid&pagesize=6&order=userid desc&template=null");}
+					{loop $utags $v}
+                        <div class="xi">
+                            <a href="{$v[linkurl]}"><img src="{imgurl($v[thumb])}" alt=""></a>
+                            <div class="xi_title">
+                                <a href="{userurl($v[username])}"><h1>{$v[title]}</h1></a>
+                                <a href="{$v[linkurl]}"><p>{dsubstr($v[introduce],50)}</p></a>
+                            </div>
+                        </div>
+						{/loop}
+                         <!--   
+                         <div class="xi">
+                            <a href=""><img src="images/mei1.jpg" alt=""></a>
+                            <div class="xi_title">
+                                <a href=""><h1>欧派</h1></a>
+                                <a href=""><p>拥有超高品质，规格齐全拥有超高品质，规格齐全拥有超高品质，规格齐全拥有超高品质，规格齐全</p></a>
+                            </div>
+                        </div> -->
+                        <div class="clear"></div>
+                    </div>
+                </div>
+				{/loop}
+                
+                    
+            </div>
+
+                 <ul class="flright bc">
+				 {loop $maclids $k $t}
+				 {if $k>=5}
+                     <li class="{if $k==5}hover {/if}dc" id="meiti{$k+1}" onMouseover="setTab('meiti',{$k+1},{$nn})">
+                          <a href="{cat_url($t[catid])}"><h1>{$t[catname]}</h1></a>
+                        <a href="{cat_url($t[catid])}">{$t[catdir]}</a>
+                        <div class="ex">
+						{php $scalids=get_maincat($t['catid'],$moduleid,1);}
+						{loop $scalids $j $ss}
+                            <p><a href="{cat_url($ss[catid])}">{$ss[catname]}</a></p>
+							{/loop}
+                             <!-- <p><a href="">机场大牌</a></p>
+                         
+                            <p><a href="">其他</a></p> -->
+                        </div>
+                     </li>
+					 {/if}
+					 {/loop}
+                     
+					 <!-- <li class="dc" id="meiti7" onMouseover="setTab('meiti',7,10)">
+                          <a href="#"><h1>地铁广告</h1></a>
+                        <a href="#">DITIEGUANGGAO</a>
+                        <div class="ex">
+                           <p><a href="">车内看板</a></p>
+                            
+                            <p><a href="">安全门</a></p>
+                            <p><a href="">站台看板</a></p>
+                            <p><a href="">其他</a></p>
+                        </div>
+                     </li>
+                      -->
+                </ul>
+           </div>
+           <div class="baike_bot bot mei">
+          
+			{php $utags=tag("moduleid=4&condition=groupid>5&pagesize=8&showcat=1&order=vip desc,userid desc&template=null");}
+{loop $utags $v}
+    <li>
+        <span class="fli">{$v[truename]}</span>
+        <span>{timetodate($v[regtime],2)}</span>
+        <!-- <span>浏览了</span> -->
+        <span><a href="{$v[linkurl]}">{$v[company]}</a></span>
+        <span>{$v[catname]}</span>
+    </li>
+	{/loop}
+			
+			<!--   
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li> -->
+        </div>
+       </div>
+   </div>
+
+
+ 
+
+ 
+{template 'footer'}

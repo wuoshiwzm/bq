@@ -1,0 +1,23 @@
+
+
+
+    <div class="zsbottom">
+       <div id="con_zs_1" class="display" style="display: block;">
+         <div class="tw">
+           <ul>
+		   {loop $tags $k $t}
+             <li>
+               <a href="{$t[linkurl]}"><img src="{imgurl($t[thumb])}" width="120" height="108"></a>
+               <div class="wznr">
+                 <h2><a href="{$t[linkurl]}">{$t[title]}</a></h2>
+                 <span>{$t[introduce]}</span>
+               </div>
+             </li>
+            	{/loop}	
+           </ul>
+          {if $showpage && $pages} <div class="fenye xia"> {$pages}</div>{/if}
+                <a href="{DT_STATIC}ZIMEITI/"> <img src="{DT_STATIC}file/images/guanggao.jpg" alt="" class="xq_mei"> </a>
+         </div>
+       </div>
+
+    </div>

@@ -1,0 +1,272 @@
+{template 'head'}
+    <script type="text/javascript" src="{DT_STATIC}file/js/jquery.js"></script>
+	<script type="text/javascript" src="{DT_STATIC}file/js/link.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/js/scroll.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.list_lh li:even').addClass('lieven');
+})
+$(function(){
+	$("div.list_lh").myScroll({
+		speed:40, //数值越大，速度越慢
+		rowHeight:25 //li的高度
+	});
+});
+</script>
+<style>
+.ckgd{width: 106px;
+    height: 34px;
+    background: #e70012;
+    color: #fff;
+    line-height: 34px;
+    text-align: center;
+    border: 0px;
+    font-size: 14px;
+    margin-left: 49px;
+    margin-top: 10px;}
+</style>
+    <div class="ny_banner">
+    	
+    </div>
+    <div class="zhaobiao">
+        <div class="zhao bot">
+		{php $ztags=tag("moduleid=27&condition=status=3&areaid=$cityid&pagesize=6&order=edittime desc&template=null");}
+		{loop $ztags $v}
+            <li><span><a href="{$v[linkurl]}">{$v[title]}</a></span></li>
+			{/loop}
+            <!-- <li><span><a href="">西安步旗文化广告传播公司</a></span></li>
+            <li><span><a href="">西安步旗文化广告传播公司</a></span></li>
+            <li><span><a href="">西安步旗文化广告传播公司</a></span></li>
+            <li><span><a href="">西安步旗文化广告传播公司</a></span></li>
+            <li><span><a href="">西安步旗文化广告传播公司</a></span></li> -->
+        </div>
+        <div class="zhao_main">
+		{php $ntags=tag("$moduleid=21&condition=status=3 and thumb<>''&areaid=$cityid&pagesize=1&order=addtime desc&template=null");}
+		{loop $ntags $v}
+            <div class="zhma_left">
+                <img src="{DT_STATIC}file/images/wwa.jpg" alt="">
+                <p><a href="{$v[linkurl]}">{dsubstr($v[introduce],50)}．．．</a></p>
+                <!-- <input type="button" value="查看更多>"> -->
+				<a href="" style="" class="ckgd">查看更多</a>
+            </div>
+			{/loop}
+            <div class="zhma_right">
+            	<div class="li_br1">
+                  		<span class="hover" id="br1" onmouseover="setTab('br',1,4)"><a href="{cat_url(212)}">国际招标</a></span>
+                  		<span class="" id="br2" onmouseover="setTab('br',2,4)"><a href="{cat_url(214)}">政府采购</a></span>
+                        <span class="" id="br3" onmouseover="setTab('br',3,4)"><a href="{cat_url(215)}">工程招标</a></span>
+                         <span class="" id="br3" onmouseover="setTab('br',4,4)"><a href="{$MODULE[27][linkurl]}">中标结果</a></span>
+                        <div class="clear"></div>
+            	 </div>
+                 <div class="br_box">
+                 	<div id="con_br_1" class="display" style="display: block;">
+                    	{tag("moduleid=$moduleid&condition=status=3&catid=212&areaid=$cityid&pagesize=5&showpage=1&page=$page&template=list-zb")}
+						 <!-- <li>
+                    		<h1><a href="">自贡市第三人民医院医用X射线设备等医疗器械采购项目</a></h1>
+                    		<p><a href="">四川国际招标有限责任公司接受自贡市第三人民医院的委托，对下列产品及服务进行国际公开竞争性招标（公开招标）。现邀请合格投标人参加投标...</a></p>
+                		</li>
+                 		<li>
+                    		<h1><a href="">自贡市第三人民医院医用X射线设备等医疗器械采购项目</a></h1>
+                   			 <p><a href="">四川国际招标有限责任公司接受自贡市第三人民医院的委托，对下列产品及服务进行国际公开竞争性招标（公开招标）。现邀请合格投标人参加投标...</a></p>
+                		</li>
+                 		<li>
+                    		<h1><a href="">自贡市第三人民医院医用X射线设备等医疗器械采购项目</a></h1>
+                    		<p><a href="">四川国际招标有限责任公司接受自贡市第三人民医院的委托，对下列产品及服务进行国际公开竞争性招标（公开招标）。现邀请合格投标人参加投标...</a></p>
+                		</li>
+                 		<li>
+                    		<h1><a href="">自贡市第三人民医院医用X射线设备等医疗器械采购项目</a></h1>
+                    		<p><a href="">四川国际招标有限责任公司接受自贡市第三人民医院的委托，对下列产品及服务进行国际公开竞争性招标（公开招标）。现邀请合格投标人参加投标...</a></p>
+               			 </li> -->
+                    </div>
+                    <div id="con_br_2" class="hidden" style="display: none;">
+					{tag("moduleid=$moduleid&condition=status=3&catid=214&areaid=$cityid&pagesize=5&showpage=1&page=$page&template=list-zb")}
+                    	 
+                    </div>
+                    <div id="con_br_3" class="hidden" style="display: none;">
+                    {tag("moduleid=$moduleid&condition=status=3&catid=215&areaid=$cityid&pagesize=5&showpage=1&page=$page&template=list-zb")}
+                    </div>
+                    <div id="con_br_4" class="hidden" style="display: none;">
+                    {tag("moduleid=27&condition=status=3&areaid=$cityid&pagesize=5&showpage=1&page=$page&template=list-zb")}
+                    </div>
+                 </div>
+                <!-- <div class="fenye xia">
+                    <span><a href="#">上一页</a></span>
+                    <span><a href="#">1</a></span>
+                    <span><a href="#">2</a></span>
+                    <span><a href="#">3</a></span>
+                    <span><a href="#">4</a></span>
+                    <span><a href="#">下一页</a></span>
+                </div> -->
+            </div>
+        </div>
+        <div class="baike_bot bot shang">
+            {php $utags=tag("moduleid=4&condition=groupid>5&pagesize=8&showcat=1&order=vip desc,userid desc&template=null");}
+{loop $utags $v}
+    <li>
+        <span class="fli">{$v[truename]}</span>
+        <span>{timetodate($v[regtime],2)}</span>
+        <!-- <span>浏览了</span> -->
+        <span><a href="{$v[linkurl]}">{$v[company]}</a></span>
+        <span>{$v[catname]}</span>
+    </li>
+	{/loop}
+
+			<!-- <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li>
+            <li>
+                 <span class="fli">张三</span>
+                 <span>13.20</span>
+                 <span>浏览了</span>
+                 <span><a href="">西安步旗文化广告传播公司</a></span>
+                 <span>求购公司</span>
+            </li> -->
+        </div>
+    </div>
+{template 'foot'}
+
+<div class="fot_right">
+	<div class="zctop"><a href="{$MODULE[26][linkurl]}">招标</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+			{php $ztags=tag("moduleid=26&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+		<!-- <li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+        <li><a href="">自贡市第三人民医院医用X..</a></li>
+		<li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li> -->
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+	<div class="zctop"><a href="{$MODULE[22][linkurl]}">招商</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+{php $ztags=tag("moduleid=22&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+	 
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+</div>
+<div class="fot_left">
+	<div class="zctop"><a href="{$MODULE[5][linkurl]}">出租</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+			{php $ztags=tag("moduleid=5&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+		<!-- <li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+        <li><a href="">自贡市第三人民医院医用X..</a></li>
+		<li><a href="">自贡市第三人民医院医民医用X..</a></li>
+		<li><a href="">自贡市第三人民民医院医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li>
+		<li><a href="">自贡市第三民医X..</a></li>
+		<li><a href="">自贡市第三人民医民医医用X..</a></li>
+		<li><a href="">自贡市民医院医用X..</a></li> -->
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+        <div class="zctop"><a href="{$MODULE[6][linkurl]}">求购</a></div>
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+			{php $ztags=tag("moduleid=6&length=28&condition=status=3&pagesize=12&order=addtime desc&template=null");}
+			{loop $ztags $v}
+				<li><a href="{$v[linkurl]}">{$v[title]}..</a></li>
+				{/loop}
+		 
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+</div>
+</body>
+</html>

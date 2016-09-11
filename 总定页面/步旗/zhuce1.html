@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百科资料</title>
+	<link rel="stylesheet" media="screen" href="css/style.css" />
+	<link rel="stylesheet" media="screen" href="css/ny.css" />
+</head>
+<body>
+<div class="top">
+<div class="wrappersy">
+<div class="logo"><a href=""><img src="images/logo.jpg" /></a></div>
+    <div class="top_right">
+        <div class="rig_top">
+            <div class="city">西安 <span>[ 切换城市：咸阳 铜川 ]</span></div>
+            <div class="welocome">欢迎光临西安步旗广告传播有限公司网络平台!</div>
+            <div class="data">
+                <span>今天是:2016年5月6日</span>
+                <iframe width="450" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=1&py=xian&wind=1&num=2"></iframe>
+            </div>
+        </div>
+    <div class="nav">
+        <li class="select">
+            <a href=""><p class="nav_top">SHOUYE</p><p class="nav_bottom">网站首页</p></a>
+        </li>
+         <li>
+            <a href=""><p class="nav_top">GUANGGAO</p><p class="nav_bottom">广告媒体</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">SHEJI</p><p class="nav_bottom">创意设计</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">CEHUA</p> <p class="nav_bottom">活动策划</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">ZIMEITI</p><p class="nav_bottom">自媒体</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">ZHAOBIAO</p><p class="nav_bottom">热门招标</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">PENGYOU</p><p class="nav_bottom">朋友圈</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">HEHUOREN</p><p class="nav_bottom">合伙人</p></a>
+        </li>
+        <li>
+            <a href=""><p class="nav_top">BAIKEZILIAO</p><p class="nav_bottom">百科资料</p></a>
+        </li>
+    </div>
+    <div class="search">
+        <input type="text" class="sousuo" value="输入需要查找的信息">
+        <div>
+            <select id="" class="hangye">
+                <option value="-1">行业搜索</option>
+                <option value="">地区搜索</option>
+            </select>
+        </div>
+        <input type="button" value="" class="btn">
+    </div>
+    <div class="quyu">
+        <select id="" class="quyua">区域
+            <option value="-1">区域</option>
+            <option value="">地区搜索</option>
+        </select>
+        <select id="" class="quyua">档期
+            <option value="-1">档期</option>
+            <option value="">地区搜索</option>
+        </select>
+        <select id="" class="quyua">位置
+            <option value="-1">位置</option>
+            <option value="">地区搜索</option>
+        </select>
+    </div>
+</div>
+</div>
+</div>
+    <div class="ny_banner">
+    	
+    </div>
+    <style>
+            .reg_flow1 {
+                height: 35px;
+                line-height: 35px;
+                margin: 15px 0
+            }
+            
+            .reg_flow1 ul li {
+                float: left;
+                width: 232px;
+                font-family: "微软雅黑";
+                font-size: 16px;
+                color: #000;
+                padding-left: 30px;
+            }
+            
+            .reg_flow1 ul li.current {
+                color: red;
+                font-weight: bold;
+            }
+    </style>
+
+    <div class="wrapper">
+            <div class="reg_flow1">
+                <ul>
+                    <li class="current">
+                        1.填写用户名和密码
+                    </li>
+                    <li>
+                        2.完善资料
+                    </li>
+                    <li>
+                        3.注册成功
+                    </li>
+                </ul>
+            </div>
+            <div class="reg_info reg_step1">
+                <form id="regbasicForm" action="">
+                    <input type="hidden" name="groupId" value="F59D77FA-2740-4205-B40E-25F7FD2597B5">
+                    <div class="reg_info_l">
+                        <ul>
+                            <li>
+                                <label>
+                                    <i class="red">*</i>用户名：
+                                </label>
+                                <input name="userName" id="userName" class="k" type="text" autocomplete="off" onblur="checkName()" maxlength="18">
+                                <span class="prompt">* 请输入6-18位由字母和（或）数字组成的字符串</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <i class="red">*</i>密码：
+                                </label>
+                                <input name="userPass" id="userPass" class="k" type="password" autocomplete="off" onblur="checkPass()" maxlength="16">
+                                <span class="prompt">* 请输入6-16位任意字符</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <i class="red">*</i>确认密码：
+                                </label>
+                                <input name="userPass1" id="userPass1" class="k" type="password" autocomplete="off" onblur="checkPass1()" maxlength="16">
+                                <span class="prompt">* 请重复输入您的密码</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <i class="red">*</i>邮箱：
+                                </label>
+                                <input name="email" id="email" class="k" type="text" autocomplete="off" onblur="checkEmail1()" maxlength="50">
+                                <span class="prompt">* 请填写常用邮箱地址</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <i class="red">*</i>手机号码：
+                                </label>
+                                <input name="phone" id="phone" class="k" type="text" autocomplete="off" onblur="checkPhone1()" maxlength="11">
+                                <span class="prompt">* 请输入11位手机号码</span>
+                            </li>
+                            <li>
+                                <label></label>
+                                <span id="msg"></span>
+                                <a href="javascript:void(0);" id="btn_sub" class="reg_btn">下一步</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="reg_info_r">
+                    <h2>
+                        已经拥有账号？
+                        <a href="">立即登录</a>
+                    </h2>
+                    <ol>
+                        <li>
+                            获取最新的政策及资讯
+                        </li>
+                        <li>
+                            全站多维度搜索服务信息
+                        </li>
+                        <li>
+                            权威专家帮您解决疑难问题
+                        </li>
+                        <li>
+                            免费发布服务及产品、宣传企业
+                        </li>
+                        <li>
+                            享受更多高性价比的专业服务
+                        </li>
+                        <li>
+                            专业客服人员全天为您服务
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    </div>
+<div class="footer">
+    <div class="fot_main">
+        <img src="images/footlogo.jpg" class="fotlogo" />
+        <div class="mian_com">
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="fot_box">
+                <div class="top_fot">
+                    <a href="">广告媒体</a>
+                </div>
+                <ul>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+                    <li><a href="">电视广告</a></li>
+
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="fot_bot ">
+                <p class="left">版权所有：西安步旗广告文化传播有限公司</p>                 
+                <p class="right"> 网站总浏览量：1234  今日浏览量：230  当前在线人数：20人</p>
+            </div>  
+        </div>
+        <div class="rig_fot">
+            <img src="images/weixin.jpg" alt="" />
+            <p>微信扫一扫</p>
+        </div>
+    </div>
+</div>
+<div id="footpanel">
+    <div class="li_foo">
+               <li class="hover" id="foo1" onMouseover="setTab('foo',1,2)"><a href="#">招商招标</a></li>
+               <li class="" id="foo2" onMouseover="setTab('foo',2,2)"><a href="#">出租求购</a></li>
+        <div class="clear"></div>
+    </div>
+     <div class="con_foo">
+            <div id="con_foo_1" class="display" style="display: block;"> 
+                    <div id="scrollText" style="width: 100%; height:175px; overflow: hidden; text-align: left; ">
+                        <ul>
+                             <li><a href="#" target="_blank">区政协举办“树立法治理念 推进依法治区”第四届委员论坛</a></li>
+                             <li><a href="#" target="_blank" >我区开展重阳节走访慰问离退休老干部活动</a></li>
+                             <li><a href="#" target="_blank" >刘鹏来我区调研督查体育工作</a></li>
+                             <li><a href="#" target="_blank">岳亮在调研咸阳湖二期项目推进工作时强调 严格质量标</a></li>
+                             <li><a href="#" target="_blank" >关于申报2014年事业单位补充工作人员公开选招计划的通知</a></li>
+                             <li><a href="#" target="_blank" >供电公司停电公告（2013/11/16—2013/11/22）</a></li>
+                             <li><a href="#" target="_blank">关于开展2013年度县级青年文明号评选活动的通知</a></li>
+                              <li><a href="#" target="_blank">区政协举办“树立法治理念 推进依法治区”第四届委员论坛</a></li>
+                             <li><a href="#" target="_blank" >我区开展重阳节走访慰问离退休老干部活动</a></li>
+                             <li><a href="#" target="_blank" >刘鹏来我区调研督查体育工作</a></li>
+                             <li><a href="#" target="_blank">岳亮在调研咸阳湖二期项目推进工作时强调 严格质量标</a></li>
+                             <li><a href="#" target="_blank" >关于申报2014年事业单位补充工作人员公开选招计划的通知</a></li>
+                             <li><a href="#" target="_blank" >供电公司停电公告（2013/11/16—2013/11/22）</a></li>
+                             <li><a href="#" target="_blank">关于开展2013年度县级青年文明号评选活动的通知</a></li>
+                        </ul>
+                    </div>
+            </div> 
+            <div id="con_foo_2" class="hidden" style="display: none;">
+
+                <div id="scrollText" style="width: 100%; height:175px; overflow: hidden; text-align: left; ">
+                        <ul>
+                             <li><a href="#" target="_blank">区政协举办“树立法治理念 推进依法治区”第四届委员论坛</a></li>
+                             <li><a href="#" target="_blank" >我区开展重阳节走访慰问离退休老干部活动</a></li>
+                             <li><a href="#" target="_blank" >刘鹏来我区调研督查体育工作</a></li>
+                             <li><a href="#" target="_blank">岳亮在调研咸阳湖二期项目推进工作时强调 严格质量标</a></li>
+                             <li><a href="#" target="_blank" >关于申报2014年事业单位补充工作人员公开选招计划的通知</a></li>
+                             <li><a href="#" target="_blank" >供电公司停电公告（2013/11/16—2013/11/22）</a></li>
+                             <li><a href="#" target="_blank">关于开展2013年度县级青年文明号评选活动的通知</a></li>
+                              <li><a href="#" target="_blank">区政协举办“树立法治理念 推进依法治区”第四届委员论坛</a></li>
+                             <li><a href="#" target="_blank" >我区开展重阳节走访慰问离退休老干部活动</a></li>
+                             <li><a href="#" target="_blank" >刘鹏来我区调研督查体育工作</a></li>
+                             <li><a href="#" target="_blank">岳亮在调研咸阳湖二期项目推进工作时强调 严格质量标</a></li>
+                             <li><a href="#" target="_blank" >关于申报2014年事业单位补充工作人员公开选招计划的通知</a></li>
+                             <li><a href="#" target="_blank" >供电公司停电公告（2013/11/16—2013/11/22）</a></li>
+                             <li><a href="#" target="_blank">关于开展2013年度县级青年文明号评选活动的通知</a></li>
+                        </ul>
+                    </div>
+            </div>
+</div>
+</body>
+</html>

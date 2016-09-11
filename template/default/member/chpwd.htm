@@ -1,0 +1,177 @@
+{template 'header-left','member'}
+
+<style>
+#Dtop{border-right:#CCCCCC 3px solid;border-bottom:#CCCCCC 3px solid;}
+#Dtop .dbody{border:#305C81 1px solid;background:#EBF0F6;}
+#Dtop .dhead{background:#ff6600;color:#FFFFFF;padding:0 0 0 10px;letter-spacing:1px;line-height:26px;height:26px;font-weight:bold;cursor:move;-moz-user-select:none;-khtml-user-select:none;user-select:none;}
+#Dtop .dhead span{float:right;cursor:pointer;display:block;width:26px;height:26px;background:url('close.gif') no-repeat center center;}
+#Dtop .dbox{padding:8px;overflow:hidden;line-height:200%;clear:both;}
+#Dtop .dsize{height:11px;font-size:1px;}
+#Dtop .dsize div{height:11px;width:11px;background:url('resize.gif') no-repeat;cursor:se-resize;font-size:1px;float:right;}
+.perc{height:9px;line-height:9px;font-size:1px;background:#FFFFFF;border:#EA7211 1px solid;text-align:left;}
+.perc div{height:9px;line-height:9px;font-size:1px;background:url('percent.gif') repeat-x;}
+</style>
+
+<div class="ge_right fr">
+<form id="frm1" name="frm1" action="?" >
+ 
+ 
+
+ <div class="zc_top mt10">密码管理</div>
+           
+ 
+<table border="0" cellspacing="0" cellpadding="0" class="regTable" style="float:left; margin:20px 0px 0px 0px; ">
+        <tbody>
+        
+          
+          <tr>
+            <td colspan="2"><h1>新登录密码：</h1><input name="post[password]" id="password" class="sqtj_txt1" type="password" value=""></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span class="tips" style="display: none;"> </span></td>
+          </tr>
+          <tr>
+            <td colspan="2"><h1>重复登录密码：</h1><input name="post[cpassword]" id="cpassword" class="sqtj_txt1" type="password"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span class="tips" style="display: none;"> </span></td>
+          </tr>
+          
+          <tr>
+            <td colspan="2"><h1>现有密码：</h1><input name="post[oldpassword]" id="oldpassword" class="sqtj_txt1" type="password"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span class="tips" style="display: none;">如要更改密码，需输入现有密码</span></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align:center"><input name="submit" type="submit" value="提交" class="dc_but" /></td>
+          </tr>
+         </tbody>
+        </table>
+
+ 
+		</form>
+        <div class="clear"></div>
+        
+			</div>
+ 
+{load('clear.js')}
+<script type="text/javascript">
+var vid = '';
+function validator(id) {
+	if(!Dd(id).value) return false;
+	vid = id;
+	makeRequest('moduleid={$moduleid}&action=member&job='+id+'&value='+Dd(id).value+'&userid={$userid}', AJPath, '_validator');
+}
+function _validator() {
+	if(xmlHttp.readyState==4 && xmlHttp.status==200) {
+		Dd('d'+vid).innerHTML = xmlHttp.responseText ? xmlHttp.responseText : '';
+	}
+}
+function Dcheck() {
+	if(Dd('truename').value == '') {
+		Tab(0);
+		Dmsg('请填写真实姓名', 'truename');
+		return false;
+	}
+	if(Dd('password').value != '') {
+		if(Dd('cpassword').value == '') {
+			Tab(1);
+			Dmsg('请重复输入密码', 'cpassword');
+			return false;
+		}
+		if(Dd('password').value != Dd('cpassword').value) {
+			Tab(1);
+			Dmsg('两次输入的密码不一致', 'password');
+			return false;
+		}
+		if(Dd('oldpassword').value == '') {
+			Tab(1);
+			Dmsg('请输入密码', 'oldpassword');
+			return false;
+		}
+	}
+	if(Dd('payword').value != '') {
+		if(Dd('cpayword').value == '') {
+			Tab(1);
+			Dmsg('请重复输入支付密码', 'cpayword');
+			return false;
+		}
+		if(Dd('payword').value != Dd('cpayword').value) {
+			Tab(1);
+			Dmsg('两次输入的支付密码不一致', 'payword');
+			return false;
+		}
+		if(Dd('oldpayword').value == '') {
+			Tab(1);
+			Dmsg('请输入支付密码', 'oldpayword');
+			return false;
+		}
+	}
+
+{if !$is_company}	
+	if(Dd('areaid_1').value == 0) {
+		Tab(0);
+		Dmsg('请选择所在地', 'areaid');
+		return false;
+	}
+{/if}
+
+	{if $MFD}{fields_js($MFD)}{/if}
+	{if $is_company}
+	{if $CFD}{fields_js($CFD)}{/if}
+	if(Dd('type').value == '') {
+		Tab(2);
+		Dmsg('请选择公司类型', 'type');
+		return false;
+	}
+	if(Dd('areaid_1').value == 0) {
+		Tab(2);
+		Dmsg('请选择公司所在地', 'areaid');
+		return false;
+	}
+	if(Dd('catid').value.length < 2) {
+		Tab(2);
+		Dmsg('请选择公司主营行业', 'catid');
+		return false;
+	}
+	if(Dd('business').value.length < 4) {
+		Tab(2);
+		Dmsg('主要经营范围最少3字', 'business');
+		return false;
+	}
+	if(Dd('regyear').value.length < 4) {
+		Tab(2);
+		Dmsg('请填写公司成立年份', 'regyear');
+		return false;
+	}
+	if(Dd('daddress').value.length < 5) {
+		Tab(3);
+		Dmsg('请填写公司地址', 'daddress');
+		return false;
+	}
+	if(Dd('telephone').value.length < 6) {
+		Tab(3);
+		Dmsg('请填写公司电话', 'telephone');
+		return false;
+	}
+	if(FCKLen('content') < 10) {
+		Tab(4);
+		Dmsg('公司介绍最少10字，当前已经输入'+FCKLen('content')+'字', 'content');
+		return false;
+	}
+	{/if}
+	return true;
+}
+</script>
+<script type="text/javascript">
+s('edit');
+{if $tab}
+Tab({$tab});
+{else}
+m('Tab0');
+{/if}
+</script>
+                
+		 <div class="clear"></div>
+{template 'footer','member'}

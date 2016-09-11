@@ -1,0 +1,31 @@
+{template 'header'}
+
+
+
+{template 'head'}
+
+ 
+ 
+
+<div class="xiangqing">
+  <div class="zs">
+    <div class="zstop">
+      <ul>
+	  
+		{loop $maincat $k $v}
+	
+        <li  id="zs1" {if $v[catid]==$catid}class="hover"{/if} onMouseDown="setTab('zs',{$k},3)"><a href="{$MOD[linkurl]}{$v[linkurl]}">{set_style($v[catname],$v[style])}</a></li>
+		{/loop}
+
+		
+      </ul>
+    </div>
+	 	<!--{tag("moduleid=$moduleid&condition=status=3$dtype&catid=$catid&areaid=$cityid&pagesize=".$MOD[pagesize]."&page=$page&showpage=1&datetype=5&order=".$MOD[order]."&fields=".$MOD[fields]."&lazy=$lazy&template=list-buy")}-->
+</div></div>
+
+
+
+ 
+
+ 
+{template 'footer'}
